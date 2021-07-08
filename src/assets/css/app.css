@@ -1,0 +1,15 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+svg {
+  height: 20px;
+  margin-right: 1rem;
+  width: unset;
+}
+.size {
+  line-height: 10px;
+  font-size: 10px;
+  height: 10px;
+  width: 10px;
+}
