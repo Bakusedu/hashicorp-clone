@@ -1,11 +1,11 @@
 <template>
-  <div>
+  <div v-on-clickaway="closeNavBar">
     <header
-      class="flex items-center justify-between font-semibold text-sm text-primary bg-white py-4 px-8"
+      class="flex items-center border-none xl:border-b xl:border-gray-200 justify-between font-semibold text-base text-primary bg-white py-4 px-8"
     >
       <div class="flex items-center">
-        <router-link to="/" class="block mr-16">
-          <div id="logo" class="hidden lg:block">
+        <router-link :to="'/'" class="block mr-16">
+          <div id="logo" class="hidden xl:block">
             <svg
               style="height:37px;width:unset"
               width="317"
@@ -28,7 +28,7 @@
               ></path>
             </svg>
           </div>
-          <div id="logo-mobile" class="block lg:hidden">
+          <div id="logo-mobile" class="block xl:hidden">
             <svg
               style="height:37px;width:unset"
               width="144"
@@ -52,373 +52,458 @@
             </svg>
           </div>
         </router-link>
-        <div class="hidden lg:flex items-center">
-          <ul class="mr-8 flex items-center">
+        <div class="hidden xl:flex items-center">
+          <ul
+            @click="toggleProducts"
+            class="mr-8 flex cursor-pointer items-center"
+          >
             <li class="mr-2">Products</li>
             <Dropdown :open="products" />
           </ul>
-          <ul class="mr-8 flex items-center">
+          <ul
+            @click="toggleSolutions"
+            class="mr-8 flex cursor-pointer items-center"
+          >
             <li class="mr-2">Solutions</li>
             <Dropdown :open="solutions" />
           </ul>
-          <ul class="mr-8 flex items-center">
+          <ul
+            @click="toggleCompany"
+            class="mr-8 flex cursor-pointer items-center"
+          >
             <li class="mr-2">Company</li>
             <Dropdown :open="company" />
           </ul>
-          <ul class="mr-8 flex items-center">
+          <ul
+            @click="togglePartners"
+            class="mr-8 flex cursor-pointer items-center"
+          >
             <li class="mr-2">Partners</li>
             <Dropdown :open="partners" />
           </ul>
           <ul class="mr-8 flex items-center">
-            <li class="mr-2">Events</li>
-            <Dropdown :open="events" />
+            <li class="mr-2">
+              <router-link :to="'/'" style="text-decoration:none"
+                >Events</router-link
+              >
+            </li>
           </ul>
         </div>
       </div>
-      <div class="hidden lg:flex items-center justify-evenly">
-        <ul class="mr-8 flex items-center">
+      <div class="hidden xl:flex items-center justify-evenly">
+        <ul
+          @click="toggleResources"
+          class="mr-8 flex cursor-pointer items-center"
+        >
           <li class="mr-2">Resources</li>
           <Dropdown :open="resources" />
         </ul>
-        <ul class="mr-8 flex items-center">
+        <ul
+          @click="toggleSuccess"
+          class="mr-8 flex cursor-pointer items-center"
+        >
           <li class="mr-2">Success & Support</li>
           <Dropdown :open="success" />
         </ul>
         <ul>
-          <li class="px-6 py-2 border border-gray-300">Contact sales</li>
+          <li
+            class="px-6 py-2 border transition hover:bg-light-bg cursor-pointer border-gray-300"
+          >
+            Contact sales
+          </li>
         </ul>
       </div>
-      <div class="block lg:hidden">
-        <i class="fas fa-bars size"></i>
+      <div class="block xl:hidden">
+        <i
+          v-show="!isActive"
+          @click="openMobileNav"
+          class="size fas fa-bars text-black cursor-pointer"
+        ></i>
+        <i
+          v-show="isActive"
+          @click="closeMobileNav"
+          class="size fas fa-times text-black cursor-pointer"
+        ></i>
       </div>
     </header>
-    <div class="border-t text-primary text-sm border-gray-200">
-      <div class="mx-16 my-6 flex">
-        <div class="w-4/12">
-          <div class="flex justify-between mb-8">
-            <div class="w-1/2">
-              <ul>
-                <h4
-                  class="uppercase font-bold text-gray-800 tracking-widest mb-2"
+    <!-- Mobile Navigation -->
+
+    <div style="position:relative">
+      <div
+        id="mobileNav"
+        class="font-semibold block xl:hidden absolute w-full bg-white"
+        style="z-index:20;height:91vh;top:-2px"
+        v-if="isActive"
+      >
+        <div class=" flex flex-col justify-between" style="height:inherit">
+          <div class="flex flex-col px-8">
+            <ul
+              @click="toggleProducts"
+              class="py-2 flex cursor-pointer justify-between items-center"
+            >
+              <li class="mr-2">Products</li>
+              <Dropright />
+            </ul>
+            <ul
+              @click="toggleSolutions"
+              class="py-2 flex cursor-pointer justify-between items-center"
+            >
+              <li class="mr-2">Solutions</li>
+              <Dropright />
+            </ul>
+            <ul
+              @click="toggleCompany"
+              class="py-2 flex cursor-pointer justify-between items-center"
+            >
+              <li class="mr-2">Company</li>
+              <Dropright />
+            </ul>
+            <ul
+              @click="togglePartners"
+              class="py-2 flex cursor-pointer justify-between items-center"
+            >
+              <li class="mr-2">Partners</li>
+              <Dropright />
+            </ul>
+            <ul class="py-2 flex cursor-pointer justify-between items-center">
+              <li class="mr-2">
+                <router-link :to="'/'" style="text-decoration:none"
+                  >Events</router-link
                 >
-                  infrastructure
-                </h4>
-                <ul class="flex items-center font-semibold my-2">
-                  <svg
-                    width="144"
-                    height="144"
-                    viewBox="0 0 144 144"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M55.522 32.97l32.96 19.02v38.06l-32.96-19.03V32.97zM92.09 51.99v38.06l32.95-19.03V32.97L92.09 51.99zM18.96 11.73v38.05l32.95 19.03V30.76L18.96 11.73zm36.562 101.51l32.95 19.03V94.22l-32.95-19.03v38.05z"
-                      fill="#7B42BC"
-                    ></path>
-                  </svg>
-                  <router-link>
-                    Terraform
-                  </router-link>
-                </ul>
-                <ul class="flex items-center font-semibold my-2">
-                  <svg
-                    width="144"
-                    height="144"
-                    viewBox="0 0 144 144"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M35.09 26.38L74.22 49v83.38l-39.13-22.62V26.38z"
-                      fill="#02A8EF"
-                    ></path>
-                    <path
-                      d="M93.6 36.13L51.06 11.62v17L80 45.34v51.05l13.61 7.82c8.421 4.86 15.311 2 15.311-6.47V60.28c-.01-8.42-6.92-19.28-15.32-24.15z"
-                      fill="#02A8EF"
-                    ></path>
-                  </svg>
-                  <router-link>
-                    Packer
-                  </router-link>
-                </ul>
-                <ul class="flex items-center font-semibold my-2">
-                  <svg
-                    width="144"
-                    height="144"
-                    viewBox="0 0 144 144"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M110.77 17.55L86.68 31.46V40L72 74.52 57.32 40v-8.54L33.23 17.55l-14.65 8.47v9.83l32.63 79.92 20.79 12 20.79-12 32.63-79.92v-9.83l-14.65-8.47z"
-                      fill="#0E67ED"
-                    ></path>
-                    <path
-                      d="M125.42 26.02l-24.09 13.9v8.55L81.77 92.19 72 97.83v29.94l20.79-12 32.63-79.92v-9.83zM57.32 40v-8.54l-14.66 8.46v8.55l19.57 43.72L72 86.55V74.52L57.32 40z"
-                      fill="#0850C5"
-                    ></path>
-                  </svg>
-                  <router-link>
-                    Vagrant
-                  </router-link>
-                </ul>
-              </ul>
-            </div>
-            <div class="w-1/2">
-              <ul>
-                <h4 class="uppercase font-bold tracking-widest text-gray-800">
-                  security
-                </h4>
-                <ul class="flex font-semibold items-center my-2">
-                  <svg
-                    width="144"
-                    height="144"
-                    viewBox="0 0 144 144"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M16.88 21.15L71.8 131.4l55.321-110.25H16.881zm61.46 22.12h6.39v6.4h-6.39v-6.4zM65.61 68.84h-6.39v-6.39h6.39v6.39zm0-9.59h-6.39v-6.39h6.39v6.39zm0-9.58h-6.39v-6.4h6.39v6.4zm9.59 28.76h-6.4V72h6.4v6.43zm0-9.59h-6.4v-6.39h6.4v6.39zm0-9.59h-6.4v-6.39h6.4v6.39zm0-9.58h-6.4v-6.4h6.4v6.4zm3.14 3.19h6.39v6.39h-6.39v-6.39zm0 16v-6.41h6.39v6.39l-6.39.02z"
-                      fill="#000"
-                    ></path>
-                  </svg>
-                  <router-link>
-                    Vault
-                  </router-link>
-                </ul>
-                <ul class="flex font-semibold items-center my-2">
-                  <svg
-                    width="144"
-                    height="144"
-                    viewBox="0 0 144 144"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M44.83 125.83v-8.27h17.18v-5.11h-8.33v-8.32h39.33L74.74 72.49l18.27-31.65H52.7v43.89H31V19.15h74.67l12.46 21.58L99.8 72.49l18.7 32.4-12.09 20.94H44.83z"
-                      fill="#F24C53"
-                    ></path>
-                    <path
-                      d="M48.17 104.131h-8.32v8.32h8.32v-8.32zM39.32 117.5H31v8.32h8.32v-8.32z"
-                      fill="#F24C53"
-                    ></path>
-                  </svg>
-                  <router-link>
-                    Boundary
-                  </router-link>
-                  <span
-                    class="py-1 px-2 bg-gray-800 text-xs tracking-widest rounded-sm text-white uppercase ml-1"
-                    >new</span
-                  >
-                </ul>
-              </ul>
-            </div>
+              </li>
+            </ul>
+            <ul
+              @click="toggleResources"
+              class="py-2 flex cursor-pointer justify-between items-center"
+            >
+              <li class="mr-2">Resources</li>
+              <Dropright />
+            </ul>
+            <ul
+              @click="toggleSuccess"
+              class="py-2 flex cursor-pointer justify-between items-center"
+            >
+              <li class="mr-2">Success & Support</li>
+              <Dropright />
+            </ul>
           </div>
-          <div class="flex justify-between">
-            <div class="w-1/2">
-              <ul>
-                <h4
-                  class="uppercase mb-2 font-bold tracking-widest text-gray-800"
-                >
-                  networking
-                </h4>
-                <ul class="flex items-center font-semibold my-2">
-                  <svg
-                    width="144"
-                    height="144"
-                    viewBox="0 0 144 144"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M72.53 128.7a54.787 54.787 0 01-45.258-23.85 54.784 54.784 0 019.368-72.355 54.78 54.78 0 0172.95 1.125l-13 13.6a36 36 0 100 53.43l13 13.6a54.638 54.638 0 01-37.06 14.45zm44.081-27.401a4.49 4.49 0 114.49-4.49 4.5 4.5 0 01-4.49 4.49z"
-                      fill="#E03875"
-                    ></path>
-                    <path
-                      d="M72.18 85.79A11.87 11.87 0 1184 73.93a11.88 11.88 0 01-11.82 11.86zm49.58.21a4.488 4.488 0 01-4.404-5.366 4.488 4.488 0 016.122-3.273 4.495 4.495 0 012.772 4.148 4.503 4.503 0 01-4.49 4.49zm-13.35-.56a4.488 4.488 0 01-4.4-5.385 4.487 4.487 0 013.555-3.515 4.49 4.49 0 11.845 8.9zm13.35-14.57a4.488 4.488 0 01-4.404-5.366 4.488 4.488 0 016.122-3.273 4.496 4.496 0 012.772 4.149 4.503 4.503 0 01-4.49 4.49zm-13.35.51a4.493 4.493 0 01-4.148-2.772 4.491 4.491 0 114.148 2.771zm8.461-15.61a4.49 4.49 0 11-.02-8.981 4.49 4.49 0 01.02 8.981z"
-                      fill="#E03875"
-                    ></path>
-                  </svg>
-                  <router-link>
-                    Consul
-                  </router-link>
-                </ul>
-              </ul>
-            </div>
-            <div class="w-1/2">
-              <ul>
-                <h4 class="uppercase font-bold tracking-widest text-gray-800">
-                  applications
-                </h4>
-                <ul class="flex font-semibold items-center my-2">
-                  <svg
-                    width="144"
-                    height="144"
-                    viewBox="0 0 144 144"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M72 14L21.77 43v58L72 130l50.23-29V43L72 14zm22.38 63.78L81 85.51l-16.17-8.8v18.48l-15.2 9.64V66.19l12.06-7.38 16.73 8.82V48.76l16-9.59-.04 38.61z"
-                      fill="#00CA8E"
-                    ></path>
-                  </svg>
-                  <router-link>
-                    Nomad
-                  </router-link>
-                </ul>
-                <ul class="flex font-semibold items-center my-2">
-                  <svg
-                    width="144"
-                    height="144"
-                    viewBox="0 0 144 144"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M143.228 27.66l-17.79 30.81-17.79-30.81h35.58zM48.26 48.23H36.39l29.67 51.4-11.87 20.56L.77 27.66h59.36l29.68 51.41 5.93-10.28L72 27.66h23.74l11.88 20.57 11.87 20.56-29.68 51.4-41.55-71.96z"
-                      fill="#14C6CB"
-                    ></path>
-                  </svg>
-                  <router-link>
-                    Waypoint
-                  </router-link>
-                  <span
-                    class="py-1 px-2 bg-gray-800 text-xs tracking-widest rounded-sm text-white uppercase ml-1"
-                    >new</span
-                  >
-                </ul>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="w-8/12 border-l border-gray-300">
-          <div class="ml-16">
-            <div class="flex justify-between">
-              <div class="w-2/3">
-                <h4
-                  class="uppercase tracking-widest font-bold text-gray-800 mb-2"
-                >
-                  hashicorp cloud platform
-                </h4>
-                <p
-                  class="my-2 text-gray-500 tracking-wider"
-                  style="font-weight:600"
-                >
-                  A fully managed platform to automate infrastructure<br />
-                  on any cloud with Hashicorp products.
-                </p>
-                <div class="my-8">
-                  <ul class="flex items-center font-semibold my-2">
-                    <svg
-                      width="144"
-                      height="144"
-                      viewBox="0 0 144 144"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M55.522 32.97l32.96 19.02v38.06l-32.96-19.03V32.97zM92.09 51.99v38.06l32.95-19.03V32.97L92.09 51.99zM18.96 11.73v38.05l32.95 19.03V30.76L18.96 11.73zm36.562 101.51l32.95 19.03V94.22l-32.95-19.03v38.05z"
-                        fill="#7B42BC"
-                      ></path>
-                    </svg>
-                    <router-link>
-                      Terraform Cloud
-                    </router-link>
-                  </ul>
-                  <ul class="flex font-semibold items-center my-2">
-                    <svg
-                      width="144"
-                      height="144"
-                      viewBox="0 0 144 144"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M16.88 21.15L71.8 131.4l55.321-110.25H16.881zm61.46 22.12h6.39v6.4h-6.39v-6.4zM65.61 68.84h-6.39v-6.39h6.39v6.39zm0-9.59h-6.39v-6.39h6.39v6.39zm0-9.58h-6.39v-6.4h6.39v6.4zm9.59 28.76h-6.4V72h6.4v6.43zm0-9.59h-6.4v-6.39h6.4v6.39zm0-9.59h-6.4v-6.39h6.4v6.39zm0-9.58h-6.4v-6.4h6.4v6.4zm3.14 3.19h6.39v6.39h-6.39v-6.39zm0 16v-6.41h6.39v6.39l-6.39.02z"
-                        fill="#000"
-                      ></path>
-                    </svg>
-                    <router-link>
-                      Vault
-                    </router-link>
-                  </ul>
-                  <ul class="flex items-center font-semibold my-2">
-                    <svg
-                      width="144"
-                      height="144"
-                      viewBox="0 0 144 144"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M72.53 128.7a54.787 54.787 0 01-45.258-23.85 54.784 54.784 0 019.368-72.355 54.78 54.78 0 0172.95 1.125l-13 13.6a36 36 0 100 53.43l13 13.6a54.638 54.638 0 01-37.06 14.45zm44.081-27.401a4.49 4.49 0 114.49-4.49 4.5 4.5 0 01-4.49 4.49z"
-                        fill="#E03875"
-                      ></path>
-                      <path
-                        d="M72.18 85.79A11.87 11.87 0 1184 73.93a11.88 11.88 0 01-11.82 11.86zm49.58.21a4.488 4.488 0 01-4.404-5.366 4.488 4.488 0 016.122-3.273 4.495 4.495 0 012.772 4.148 4.503 4.503 0 01-4.49 4.49zm-13.35-.56a4.488 4.488 0 01-4.4-5.385 4.487 4.487 0 013.555-3.515 4.49 4.49 0 11.845 8.9zm13.35-14.57a4.488 4.488 0 01-4.404-5.366 4.488 4.488 0 016.122-3.273 4.496 4.496 0 012.772 4.149 4.503 4.503 0 01-4.49 4.49zm-13.35.51a4.493 4.493 0 01-4.148-2.772 4.491 4.491 0 114.148 2.771zm8.461-15.61a4.49 4.49 0 11-.02-8.981 4.49 4.49 0 01.02 8.981z"
-                        fill="#E03875"
-                      ></path>
-                    </svg>
-                    <router-link>
-                      Consul
-                    </router-link>
-                  </ul>
-                </div>
-                <div class="my-2 font-semibold">
-                  <router-link to="/">
-                    Visit cloud.hashicorp.com
-                  </router-link>
-                  <i class="fas fa-arrow-right size"></i>
-                </div>
-              </div>
-              <div class="w-5/12">
-                <img
-                  src="https://www.datocms-assets.com/2885/1620155314-blog-library-product-consul-azure-logomarks.jpg"
-                  alt=""
-                />
-                <div class="px-10 pb-10 bg-light-bg">
-                  <h4
-                    style="font-size:17px"
-                    class="font-bold mb-12 leading-8 text-gray-800 tracking-wide"
-                  >
-                    Deploy Hashicorp Consul Service on Azure
-                  </h4>
-                  <router-link to="/">
-                    Get started
-                  </router-link>
-                </div>
-              </div>
-            </div>
+          <div class="flex flex-col">
+            <ul class="mt-10 p-8 bg-light-bg">
+              <li
+                class="px-6 py-2 border transition text-center hover:bg-gray-200 cursor-pointer hover:border-none border-gray-300"
+              >
+                Contact sales
+              </li>
+            </ul>
           </div>
         </div>
       </div>
+    </div>
+    <!-- Products mobile -->
+    <div
+      class="z-30 absolute w-full xl:hidden bg-white overflow-y-auto"
+      :class="
+        products
+          ? 'transition-all animate__animated animate__slideInRight animate__faster opacity-1'
+          : 'transition-all animate__animated animate__slideOutRight animate__faster'
+      "
+      style="height:75vh"
+      v-show="products"
+    >
+      <div
+        @click="toggleProducts"
+        class="w-full px-8 z-30 border-b border-gray-300 bg-white"
+        style="position:sticky;top:0px"
+      >
+        <div class="font-semibold py-4 z-10 xl:hidden">
+          <div class="flex items-center w-full">
+            <div class="mr-2">
+              <Dropright :open="true" />
+            </div>
+            <h4>Products</h4>
+          </div>
+        </div>
+      </div>
+      <Products />
+    </div>
+    <!-- end products mobile -->
+    <!-- Solutions mobile -->
+    <div
+      class="z-30 absolute w-full xl:hidden bg-white overflow-y-auto"
+      :class="
+        solutions
+          ? 'transition-all animate__animated animate__slideInRight animate__faster'
+          : 'transition-all animate__animated animate__slideOutRight animate__faster'
+      "
+      style="height:75vh"
+      v-show="solutions"
+    >
+      <div
+        @click="toggleSolutions"
+        class="w-full px-8 z-30 border-b border-gray-300 bg-white"
+        style="position:sticky;top:0px"
+      >
+        <div class="font-semibold py-4 z-10 xl:hidden">
+          <div class="flex items-center w-full">
+            <div class="mr-2">
+              <Dropright :open="true" />
+            </div>
+            <h4>Solutions</h4>
+          </div>
+        </div>
+      </div>
+      <Solutions />
+    </div>
+    <!-- end solutions mobile -->
+    <!-- Company mobile -->
+    <div
+      class="z-30 absolute w-full xl:hidden bg-white overflow-y-auto"
+      :class="
+        company
+          ? 'transition-all animate__animated animate__slideInRight animate__faster'
+          : 'transition-all animate__animated animate__slideOutRight animate__faster'
+      "
+      style="height:75vh"
+      v-show="company"
+    >
+      <div
+        @click="toggleCompany"
+        class="w-full px-8 z-30 border-b border-gray-300 bg-white"
+        style="position:sticky;top:0px"
+      >
+        <div class="font-semibold py-4 z-10 xl:hidden">
+          <div class="flex items-center w-full">
+            <div class="mr-2">
+              <Dropright :open="true" />
+            </div>
+            <h4>Company</h4>
+          </div>
+        </div>
+      </div>
+      <Company />
+    </div>
+    <!-- end company mobile -->
+    <!-- Partners mobile -->
+    <div
+      class="z-30 absolute w-full xl:hidden bg-white overflow-y-auto"
+      :class="
+        partners
+          ? 'transition-all animate__animated animate__slideInRight animate__faster'
+          : 'transition-all animate__animated animate__slideOutRight animate__faster'
+      "
+      style="height:75vh"
+      v-show="partners"
+    >
+      <div
+        @click="togglePartners"
+        class="w-full px-8 z-30 border-b border-gray-300 bg-white"
+        style="position:sticky;top:0px"
+      >
+        <div class="font-semibold py-4 z-10 xl:hidden">
+          <div class="flex items-center w-full">
+            <div class="mr-2">
+              <Dropright :open="true" />
+            </div>
+            <h4>Partners</h4>
+          </div>
+        </div>
+      </div>
+      <Partners />
+    </div>
+    <!-- end partners mobile -->
+    <!-- Resources mobile -->
+    <div
+      class="z-30 absolute w-full xl:hidden bg-white overflow-y-auto"
+      :class="
+        resources
+          ? 'transition-all animate__animated animate__slideInRight animate__faster'
+          : 'transition-all animate__animated animate__slideOutRight animate__faster'
+      "
+      style="height:75vh"
+      v-show="resources"
+    >
+      <div
+        @click="toggleResources"
+        class="w-full px-8 z-30 border-b border-gray-300 bg-white"
+        style="position:sticky;top:0px"
+      >
+        <div class="font-semibold py-4 z-10 xl:hidden">
+          <div class="flex items-center w-full">
+            <div class="mr-2">
+              <Dropright :open="true" />
+            </div>
+            <h4>Resources</h4>
+          </div>
+        </div>
+      </div>
+      <Resources />
+    </div>
+    <!-- end resources mobile -->
+    <!-- Success mobile -->
+    <div
+      class="z-30 absolute w-full xl:hidden bg-white overflow-y-auto"
+      :class="
+        success
+          ? 'transition-all animate__animated animate__slideInRight animate__faster'
+          : 'transition-all animate__animated animate__slideOutRight animate__faster'
+      "
+      style="height:75vh"
+      v-show="success"
+    >
+      <div
+        @click="toggleSuccess"
+        class="w-full px-8 z-30 border-b border-gray-300 bg-white"
+        style="position:sticky;top:0px"
+      >
+        <div class="font-semibold py-4 z-10 xl:hidden">
+          <div class="flex items-center w-full">
+            <div class="mr-2">
+              <Dropright :open="true" />
+            </div>
+            <h4>Success</h4>
+          </div>
+        </div>
+      </div>
+      <Success />
+    </div>
+    <!-- end success mobile -->
+    <!-- End Mobile Navigation -->
+    <div style="position:relative" class="hidden xl:block">
+      <Products v-show="products" />
+      <Solutions v-show="solutions" />
+      <Company v-show="company" />
+      <Partners v-show="partners" />
+      <Resources v-show="resources" />
+      <Success v-show="success" />
     </div>
   </div>
 </template>
 
 <script>
 import Dropdown from "./Navbar/Dropdown";
+import Dropright from "./Navbar/Dropright";
+import Products from "./Navbar/Products";
+import Solutions from "./Navbar/Solutions";
+import Company from "./Navbar/Company";
+import Partners from "./Navbar/Partners";
+import Resources from "./Navbar/Resources";
+import Success from "./Navbar/Success";
+import { directive as onClickaway } from "vue-clickaway";
 export default {
+  directives: {
+    onClickaway: onClickaway,
+  },
+  components: {
+    Dropdown,
+    Dropright,
+    Products,
+    Solutions,
+    Company,
+    Partners,
+    Resources,
+    Success,
+  },
   data() {
     return {
       products: false,
       solutions: false,
       partners: false,
       company: false,
-      events: false,
       resources: false,
       success: false,
+      isActive: false,
     };
   },
-  components: {
-    Dropdown,
+  computed: {
+    navOpen() {
+      return (
+        this.products ||
+        this.solutions ||
+        this.partners ||
+        this.company ||
+        this.resources ||
+        this.success ||
+        this.isActive
+      );
+    },
+  },
+  watch: {
+    navOpen(isOpen) {
+      if (isOpen) {
+        return document
+          .querySelector("body")
+          .classList.add("overflow-y-hidden");
+      }
+      return document
+        .querySelector("body")
+        .classList.remove("overflow-y-hidden");
+    },
+  },
+  methods: {
+    toggleProducts() {
+      this.products = !this.products;
+      this.solutions = false;
+      this.partners = false;
+      this.company = false;
+      this.resources = false;
+      this.success = false;
+    },
+    toggleSolutions() {
+      this.solutions = !this.solutions;
+      this.products = false;
+      this.partners = false;
+      this.company = false;
+      this.resources = false;
+      this.success = false;
+    },
+    togglePartners() {
+      this.partners = !this.partners;
+      this.products = false;
+      this.solutions = false;
+      this.company = false;
+      this.resources = false;
+      this.success = false;
+    },
+    toggleCompany() {
+      this.company = !this.company;
+      this.products = false;
+      this.solutions = false;
+      this.partners = false;
+      this.resources = false;
+      this.success = false;
+    },
+    toggleResources() {
+      this.resources = !this.resources;
+      this.products = false;
+      this.solutions = false;
+      this.partners = false;
+      this.company = false;
+      this.success = false;
+    },
+    toggleSuccess() {
+      this.success = !this.success;
+      this.products = false;
+      this.solutions = false;
+      this.partners = false;
+      this.company = false;
+      this.resources = false;
+    },
+    openMobileNav() {
+      this.isActive = true;
+    },
+    closeMobileNav() {
+      this.isActive = false;
+      this.closeNavBar();
+    },
+    closeNavBar() {
+      this.success = false;
+      this.products = false;
+      this.solutions = false;
+      this.partners = false;
+      this.company = false;
+      this.resources = false;
+      this.isActive = false;
+    },
   },
 };
 </script>
@@ -429,5 +514,18 @@ export default {
   font-size: 22px;
   height: 22px;
   width: 22px;
+}
+svg {
+  height: 20px;
+  margin-right: 1rem;
+  width: unset;
+}
+.nav-height {
+  min-height: 402px;
+  position: absolute;
+  z-index: 3;
+  background-color: white;
+  right: 0;
+  left: 0;
 }
 </style>

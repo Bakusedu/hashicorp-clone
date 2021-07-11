@@ -2,14 +2,20 @@
   margin: 0px;
   padding: 0px;
 }
-svg {
-  height: 20px;
-  margin-right: 1rem;
-  width: unset;
-}
 .size {
   line-height: 10px;
   font-size: 10px;
   height: 10px;
   width: 10px;
+}
+a:hover {
+  text-decoration: underline;
+}
+.card-height {
+  height: calc(100% - 10rem);
+}
+.max-width {
+  max-width: 1500px;
+  margin: 0 auto;
+  width: 100%;
 }
