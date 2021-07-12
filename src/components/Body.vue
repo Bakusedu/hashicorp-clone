@@ -169,7 +169,7 @@
       </div>
     </div>
     <div class="bg-light-bg">
-      <div class="max-width p-24 bg-light-bg">
+      <div class="max-width p-8 xl:p-24 bg-light-bg">
         <ul id="trusted_business">
           <li>
             <img
@@ -258,7 +258,7 @@
             alt=""
           />
           <div>
-            <h4 class="text-2xl">
+            <h4 class="text-lg xl:text-2xl">
               <strong>Infrastructure</strong>&nbsp;automation
             </h4>
             <p class="my-4">
@@ -291,7 +291,9 @@
             alt=""
           />
           <div>
-            <h4 class="text-2xl"><strong>Security</strong>&nbsp;automation</h4>
+            <h4 class="text-lg xl:text-2xl">
+              <strong>Security</strong>&nbsp;automation
+            </h4>
             <p class="my-4">
               Manage secrets and protect sensitive data based on user and
               workload identity.
@@ -322,7 +324,9 @@
             alt=""
           />
           <div>
-            <h4 class="text-2xl"><strong>Network</strong>&nbsp;automation</h4>
+            <h4 class="text-lg xl:text-2xl">
+              <strong>Network</strong>&nbsp;automation
+            </h4>
             <p class="my-4">
               Accelerate application delivery by automating the network,
               including physical devices, virtual appliances, and distributed
@@ -354,7 +358,7 @@
             alt=""
           />
           <div>
-            <h4 class="text-2xl">
+            <h4 class="text-lg xl:text-2xl">
               <strong>Application</strong>&nbsp;automation
             </h4>
             <p class="my-4">
@@ -405,15 +409,32 @@
     <div class="text-center px-6 xl:px-0" style="max-width:784px;margin:0 auto">
       <div class="pt-24 pb-12">
         <h4
-          class="text-white capitalize text-3xl xl:text-4xl  font-bold text-center"
+          class="text-black capitalize text-3xl xl:text-4xl  font-bold text-center"
         >
           our partners
         </h4>
-        <p class="mt-6 mb-4 text-center text-white text-xl">
+        <p class="mt-6 mb-2 text-center text-black text-xl">
           HashiCorp partners with the world’s top technology and solutions
           vendors, making it easier for organizations to provision, secure,
           connect, and run their applications in any environment.
         </p>
+      </div>
+      <div class="flex items-center font-semibold justify-center group">
+        <router-link
+          :to="'/'"
+          class=" hover:no-underline transition hover:bg-blue-600 text-white p-4 bg-primary-blue"
+        >
+          Find a partner
+        </router-link>
+      </div>
+    </div>
+    <div class="text-center px-6 xl:px-0" style="max-width:784px;margin:0 auto">
+      <div class="pt-24 pb-12">
+        <h4
+          class="text-black capitalize text-3xl xl:text-4xl  font-bold text-center"
+        >
+          featured partners
+        </h4>
       </div>
     </div>
   </div>

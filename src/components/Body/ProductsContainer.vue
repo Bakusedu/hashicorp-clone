@@ -1,8 +1,11 @@
 <template>
-  <intersect @enter="addSticky" @leave="removeSticky">
-    <div class="max-width px-8 xl:px-16">
+  <intersect>
+    <div class="max-width px-8 xl:px-16" style="position:relative">
       <div class="flex justify-between">
-        <div class="w-1/6 h-screen hidden xl:flex items-center stickycss">
+        <div
+          id="fixed"
+          class="w-1/6 h-screen hidden xl:flex items-center stickycss"
+        >
           <ul>
             <li
               class="capitalize mb-2 transition"
@@ -45,8 +48,10 @@
             <Run @scrollRun="handleTarget" />
           </div>
         </div>
-        <div class="hidden lg:block w-1/3" style="position:relative">
-          <div class="stickycss">
+        <div
+          class="hidden h-screen xl:flex items-center lg:block stickycss w-1/3"
+        >
+          <div class="">
             <img
               src="https://www.hashicorp.com/img/home/stack-full.png"
               class="transition-opacity"
@@ -130,10 +135,12 @@ export default {
       this.index = index;
     },
     addSticky() {
-      console.log("sticky added");
+      let el = document.getElementById("fixed");
+      el.classList.add("stickycss");
     },
     removeSticky() {
-      console.log("sticky added");
+      let el = document.getElementById("fixed");
+      el.classList.remove("stickycss");
     },
     // onChange(entry) {
     //   console.log(entry);
