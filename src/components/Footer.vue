@@ -162,9 +162,9 @@
         </li>
       </ul>
     </div>
-    <div class="flex justify-between text-sm text-primary">
-      <div class="w-5/12">
-        <div class="grid gap-8 grid-cols-1 xl:grid-cols-2">
+    <div class="xl:flex  justify-between text-sm text-primary">
+      <div class="w-full xl:w-5/12">
+        <div class="grid gap-8 grid-cols-2 xl:grid-cols-2">
           <div class="py-4">
             <h4 class="uppercase text-xs font-semibold">Provision</h4>
             <span class="block my-2 text-white capitalize"
@@ -269,9 +269,9 @@
           </div>
         </div>
       </div>
-      <div class="w-1/2">
+      <div class="w-full xl:w-1/2">
         <div
-          class="capitalize grid gap-3 grid-cols-1 lg:grid-cols-3 xl:grid-cols-3"
+          class="capitalize grid gap-3 grid-cols-2 lg:grid-cols-3 xl:grid-cols-3"
         >
           <div class="py-4">
             <h4 class="uppercase text-xs font-semibold">Products</h4>
