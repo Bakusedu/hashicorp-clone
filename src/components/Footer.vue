@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-black pt-24 px-16">
+  <div class="bg-black pt-24 px-8">
     <div class="w-full xl:w-6/12">
       <form action="">
         <div class="mb-3">
@@ -27,7 +27,7 @@
       </form>
     </div>
     <div
-      class="my-12 py-2 border-t border-b border-primary xl:flex justify-between"
+      class="my-12 py-6 border-t border-b border-primary xl:flex justify-between"
     >
       <div>
         <svg
@@ -427,5 +427,8 @@ export default {};
 <style>
 input[type="text"]::-webkit-input-placeholder {
   color: gray;
+}
+a:hover {
+  text-decoration: none;
 }
 </style>
