@@ -8,7 +8,8 @@ module.exports = {
         'light-bg' : '#f2f2f4',
         'deep-blue': '#2d519b',
         'primary-blue' : '#2965ce',
-        'purple' : '#844fba'
+        'purple' : '#844fba',
+        'primary-text': '#727274'
       },
       width: {
         "space-between": "47%",

@@ -19,7 +19,7 @@
           fill="#00CA8E"
         />
       </svg>
-      <p class="text-primary my-6 text-lg">
+      <p class="text-primary-text my-6 text-lg">
         Deploy and manage any containerized, legacy, or batch application.
       </p>
       <hr class="bg-primary w-8  border-primary my-8" />

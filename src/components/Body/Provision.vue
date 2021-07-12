@@ -25,7 +25,7 @@
           fill="#7B42BC"
         />
       </svg>
-      <p class="text-primary my-6 text-lg">
+      <p class="text-primary-text my-6 text-lg">
         Use reproducible infrastructure as code to provision any cloud, or
         infrastructure.
       </p>

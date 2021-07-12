@@ -4,7 +4,7 @@
       <h4 class="text-white capitalize font-bold text-3xl xl:text-4xl mb-6">
         The HashiCorp Stack
       </h4>
-      <p class="text-primary text-lg">
+      <p class="text-primary-text text-lg">
         Our tools provide a control plane for each layer of the cloud, enabling
         enterprises to make the shift to a cloud operating model. Each product
         addresses specific technical and organizational challenges of cloud

@@ -23,7 +23,7 @@
           fill="#E03875"
         />
       </svg>
-      <p class="text-primary my-6 text-lg">
+      <p class="text-primary-text my-6 text-lg">
         Automate service-based networking in the cloud.
       </p>
       <ul class="flex text-white items-center font-semibold mb-3 group">

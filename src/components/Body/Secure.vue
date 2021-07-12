@@ -17,7 +17,7 @@
           />
         </svg>
       </div>
-      <p class="text-primary my-6 text-lg">
+      <p class="text-primary-text my-6 text-lg">
         Manage secrets and protect sensitive data.
       </p>
       <ul class="flex text-white items-center font-semibold mb-3 group">
