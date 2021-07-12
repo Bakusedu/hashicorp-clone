@@ -270,7 +270,7 @@
             :animateOut="'fadeOut'"
             :animateIn="'fadeIn'"
           >
-            <div class="hero-mobile px-8 py-14">
+            <div class="hero-mobile px-4 py-14">
               <section>
                 <h4
                   class="capitalize p-2 text-sm font-semibold border border-primary inline-block"
@@ -350,7 +350,7 @@
               />
               <!-- <div class="gradient"></div> -->
             </div>
-            <div class="hero-mobile px-8 py-14">
+            <div class="hero-mobile px-4 py-14">
               <section>
                 <h4
                   class="capitalize p-2 text-sm font-semibold border border-primary inline-block"
@@ -430,7 +430,7 @@
               />
               <!-- <div class="gradient"></div> -->
             </div>
-            <div class="hero-mobile px-8 py-14">
+            <div class="hero-mobile px-4 py-14">
               <section>
                 <h4
                   class="capitalize p-2 text-sm font-semibold border border-primary inline-block"
@@ -588,7 +588,7 @@
       </div>
     </div>
     <div class="bg-light-bg">
-      <div class="max-width py-24 px-8 xl:p-24 bg-light-bg">
+      <div class="max-width py-24 px-4 xl:p-24 bg-light-bg">
         <ul id="trusted_business">
           <li>
             <img
@@ -668,7 +668,7 @@
         </div>
       </div>
     </div>
-    <div class="max-width px-8 xl:px-16 pb-24">
+    <div class="max-width px-6 xl:px-16 pb-24">
       <div class="grid gap-8 grid-cols-1 xl:grid-cols-2">
         <div class="p-6 md:p-11 xl:p-10 flex flex-col lg:flex-row bg-light-bg">
           <img
@@ -817,7 +817,7 @@
           >
             our products
           </h4>
-          <p class="mt-6 mb-4 text-center text-white text-xl">
+          <p class="mt-6 mb-4 xl:text-center text-white text-xl">
             Delivering cloud infrastructure automation for operations, security,
             networking, and application delivery.
           </p>
@@ -832,7 +832,7 @@
         >
           our partners
         </h4>
-        <p class="mt-6 mb-2 text-center text-black text-xl">
+        <p class="mt-6 mb-2 xl:text-center text-black text-xl">
           HashiCorp partners with the world’s top technology and solutions
           vendors, making it easier for organizations to provision, secure,
           connect, and run their applications in any environment.
@@ -1126,7 +1126,7 @@
       </div>
     </div>
     <hr class="bg-gray-300 my-2" />
-    <div class="px-8 xl:px-16 max-width">
+    <div class="px-6 xl:px-16 max-width">
       <div class="py-24 xl:flex xl:justify-between">
         <div class="w-full xl:w-1/3">
           <h4 class="text-black capitalize text-3xl xl:text-4xl mb-4 font-bold">
@@ -1179,7 +1179,7 @@ export default {
   background-image: linear-gradient(to right, transparent 80%, black);
 }
 #cards {
-  padding: 32px;
+  padding: 24px;
   margin: 0px;
 }
 #cards:hover {
@@ -1266,7 +1266,7 @@ export default {
     margin-right: 25px;
   }
   #cards:hover {
-    padding: 32px;
+    padding: 24px;
     margin: 0px;
   }
   #trusted_business li {

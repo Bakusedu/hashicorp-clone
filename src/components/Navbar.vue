@@ -1,7 +1,7 @@
 <template>
   <div v-on-clickaway="closeNavBar">
     <header
-      class="flex items-center border-none xl:border-b xl:border-gray-200 justify-between font-semibold text-base text-primary bg-white py-4 px-8"
+      class="flex items-center border-none xl:border-b xl:border-gray-200 justify-between font-semibold text-base text-primary bg-white py-4 px-4"
     >
       <div class="flex items-center">
         <router-link :to="'/'" class="block mr-16">
