@@ -270,7 +270,7 @@
             :animateOut="'fadeOut'"
             :animateIn="'fadeIn'"
           >
-            <div class="hero-mobile p-8">
+            <div class="hero-mobile px-8 py-14">
               <section>
                 <h4
                   class="capitalize p-2 text-sm font-semibold border border-primary inline-block"
@@ -278,12 +278,10 @@
                   <span class="text-deep-blue tracking-wider">//</span>
                   infrastructure enables innovation
                 </h4>
-                <h2
-                  class="text-2xl xl:text-5xl capitalize font-bold my-4 xl:my-6"
-                >
-                  at the speed of sound
+                <h2 class="text-2xl xl:text-5xl font-bold my-6 xl:my-6">
+                  At the speed of sound
                 </h2>
-                <div class="mb-2 xl:mb-4 flex items-center">
+                <div class="my-4 flex items-center">
                   <svg
                     class="mr-4"
                     width="34"
@@ -302,26 +300,26 @@
                   <div class="border-l border-primary">
                     <img
                       src="https://www.datocms-assets.com/2885/1612205094-pandora-homepage-logo.svg"
-                      class="ml-4"
+                      class="ml-3"
                       alt=""
                     />
                   </div>
                 </div>
-                <div class="my-4 xl:my-8 text-gray-300" style="max-width:490px">
-                  <p class="m-0 xl:leading-8">
+                <div class="my-4 text-gray-300" style="max-width:490px">
+                  <p class="m-0 text-sm">
                     Global leader in streaming music discovery strikes the right
                     chord using HashiCorp to accelerate application delivery
                     from days to minutes.
                   </p>
                 </div>
-                <div class="flex items-center font-semibold">
+                <div class="xl:flex items-center font-semibold">
                   <router-link
                     :to="'/'"
-                    class="xl:tracking-wide cursor-pointer mr-12 bg-primary-blue p-4 capitalize inline-block"
+                    class="my-4 xl:my-0 cursor-pointer xl:mr-12 bg-primary-blue p-4 capitalize inline-block"
                   >
                     read customer story
                   </router-link>
-                  <ul class="flex items-center group">
+                  <ul class="flex my-4 items-center group">
                     <router-link :to="'/'" class="capitalize">
                       request demo
                     </router-link>
@@ -352,7 +350,7 @@
               />
               <!-- <div class="gradient"></div> -->
             </div>
-            <div class="hero-mobile p-8">
+            <div class="hero-mobile px-8 py-14">
               <section>
                 <h4
                   class="capitalize p-2 text-sm font-semibold border border-primary inline-block"
@@ -360,12 +358,10 @@
                   <span class="text-deep-blue tracking-wider">//</span>
                   infrastructure enables innovation
                 </h4>
-                <h2
-                  class="text-2xl xl:text-5xl capitalize font-bold my-4 xl:my-6"
-                >
-                  the 100-million player platform
+                <h2 class="text-2xl xl:text-5xl font-bold my-6 xl:my-6">
+                  The 100-million player platform
                 </h2>
-                <div class="mb-2 xl:mb-4 flex items-center">
+                <div class="my-4 flex items-center">
                   <svg
                     class="mr-4"
                     width="34"
@@ -384,26 +380,26 @@
                   <div class="border-l border-primary">
                     <img
                       src="https://www.datocms-assets.com/2885/1612205007-roblox-homepage-logo.svg"
-                      class="ml-4"
+                      class="ml-3"
                       alt=""
                     />
                   </div>
                 </div>
-                <div class="my-4 xl:my-8 text-gray-300" style="max-width:490px">
-                  <p class="m-0 xl:leading-8">
+                <div class="my-4 text-gray-300 text-sm" style="max-width:490px">
+                  <p class="m-0 text-sm">
                     As Roblox grows and evolves rapidly, HashiCorp Nomad enables
                     them to scale their global gaming platform easily and
                     reliably.
                   </p>
                 </div>
-                <div class="flex items-center font-semibold">
+                <div class="xl:flex items-center font-semibold">
                   <router-link
                     :to="'/'"
-                    class="xl:tracking-wide cursor-pointer mr-12 bg-primary-blue p-4 capitalize inline-block"
+                    class="my-4 xl:my-0 cursor-pointer xl:mr-12 bg-primary-blue p-4 capitalize inline-block"
                   >
                     read customer story
                   </router-link>
-                  <ul class="flex items-center group">
+                  <ul class="flex my-4 items-center group">
                     <router-link :to="'/'" class="capitalize">
                       request demo
                     </router-link>
@@ -434,7 +430,7 @@
               />
               <!-- <div class="gradient"></div> -->
             </div>
-            <div class="hero-mobile p-8">
+            <div class="hero-mobile px-8 py-14">
               <section>
                 <h4
                   class="capitalize p-2 text-sm font-semibold border border-primary inline-block"
@@ -442,10 +438,10 @@
                   <span class="text-deep-blue tracking-wider">//</span>
                   infrastructure enables innovation
                 </h4>
-                <h2 class="text-2xl xl:text-5xl font-bold my-4 xl:my-6">
+                <h2 class="text-2xl xl:text-5xl font-bold my-6 xl:my-6">
                   On the road again
                 </h2>
-                <div class="mb-2 xl:mb-4 flex items-center">
+                <div class="my-4 flex items-center">
                   <svg
                     class="mr-4"
                     width="34"
@@ -464,26 +460,26 @@
                   <div class="border-l border-primary">
                     <img
                       src="https://www.datocms-assets.com/2885/1612205115-mercedes-homepage-logo.svg"
-                      class="ml-4"
+                      class="ml-3"
                       alt=""
                     />
                   </div>
                 </div>
-                <div class="my-4 xl:my-8 text-gray-300" style="max-width:490px">
+                <div class="my-4 text-gray-300 text-sm" style="max-width:490px">
                   <p class="m-0 xl:leading-8">
                     Cars, Kubernetes, and HashiCorp Consul. How Mercedes-Benz
                     delivers on service networking to accelerate delivery of its
                     next-gen connected vehicles.
                   </p>
                 </div>
-                <div class="flex items-center font-semibold">
+                <div class="xl:flex items-center font-semibold">
                   <router-link
                     :to="'/'"
-                    class="xl:tracking-wide cursor-pointer mr-12 bg-primary-blue p-4 capitalize inline-block"
+                    class="my-4 xl:my-0 cursor-pointer xl:mr-12 bg-primary-blue p-4 capitalize inline-block"
                   >
                     read customer story
                   </router-link>
-                  <ul class="flex items-center group">
+                  <ul class="flex my-4 items-center group">
                     <router-link :to="'/'" class="capitalize">
                       request demo
                     </router-link>
@@ -592,7 +588,7 @@
       </div>
     </div>
     <div class="bg-light-bg">
-      <div class="max-width p-8 xl:p-24 bg-light-bg">
+      <div class="max-width py-24 px-8 xl:p-24 bg-light-bg">
         <ul id="trusted_business">
           <li>
             <img
@@ -1261,13 +1257,13 @@ export default {
 @media only screen and (max-width: 768px) {
   .owl-dots {
     position: absolute !important;
-    top: 360px !important;
+    bottom: -190px !important;
     left: 32px !important;
     display: flex !important;
     flex-direction: row !important;
   }
   .owl-dots .owl-dot {
-    margin-right: 40px;
+    margin-right: 25px;
   }
   #cards:hover {
     padding: 32px;
@@ -1281,6 +1277,7 @@ export default {
   }
   #mobile-carousel {
     display: block;
+    height: 94vh;
   }
   .hero-mobile {
     min-height: 482px;

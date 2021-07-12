@@ -4,12 +4,14 @@ module.exports = {
   theme: {
     extend: {
       colors :{
+        'whitish' : '#fff',
         'primary' : '#474748',
         'light-bg' : '#f2f2f4',
         'deep-blue': '#2d519b',
         'primary-blue' : '#2965ce',
         'purple' : '#844fba',
-        'primary-text': '#727274'
+        'primary-text': '#727274',
+        'footer-input' : '#1d1e1f'
       },
       width: {
         "space-between": "47%",
@@ -18,7 +20,10 @@ module.exports = {
       },
       stroke: theme => ({
        'purple': theme('colors.purple'),
-     })
+     }),
+      fill: theme => ({
+       'white': theme('colors.whitish'),
+     }),
     },
   },
   variants: {
@@ -27,6 +32,7 @@ module.exports = {
       transform : ['hover','group-hover'],
       margin : ['group-hover','hover'],
       stroke: ['group-hover'],
+      fill: ['hover','group-hover'],
     },
   },
   plugins: [],
