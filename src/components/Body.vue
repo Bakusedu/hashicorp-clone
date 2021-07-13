@@ -530,16 +530,16 @@
             class=" xl:hover:bg-primary-blue group"
           >
             <span
-              class="text-gray-400 xl:group-hover:text-blue-300 block text-lg uppercase"
+              class="text-gray-400 xl:group-hover:text-blue-300 block uppercase"
               >july 12 | live workshop</span
             >
             <p
-              class="my-2 text-black xl:group-hover:text-white text-lg tracking-wide font-bold"
+              class="my-2 text-black xl:group-hover:text-white tracking-wide font-bold"
             >
               Join us for a hands-on workshop covering Terraform Cloud on AWS
             </p>
             <span
-              class="text-primary-blue xl:group-hover:text-white inline-block text-lg capitalize"
+              class="text-primary-blue xl:group-hover:text-white inline-block capitalize"
             >
               register now
             </span>
@@ -550,16 +550,16 @@
             class=" xl:hover:bg-primary-blue group"
           >
             <span
-              class="text-gray-400 xl:group-hover:text-blue-300 block text-lg uppercase"
+              class="text-gray-400 xl:group-hover:text-blue-300 block uppercase"
               >on-demand</span
             >
             <p
-              class="my-2 text-black xl:group-hover:text-white text-lg tracking-wide font-bold"
+              class="my-2 text-black xl:group-hover:text-white tracking-wide font-bold"
             >
               HashiConf Europe is a wrap. Watch this year's sessions on-demand
             </p>
             <span
-              class="text-primary-blue xl:group-hover:text-white inline-block text-lg capitalize"
+              class="text-primary-blue xl:group-hover:text-white inline-block capitalize"
             >
               Watch now
             </span>
@@ -570,16 +570,16 @@
             class="xl:hover:bg-primary-blue group"
           >
             <span
-              class="text-gray-400 xl:group-hover:text-blue-300 block text-lg uppercase"
+              class="text-gray-400 xl:group-hover:text-blue-300 block uppercase"
               >july 15 | live webinar</span
             >
             <p
-              class="my-2 text-black xl:group-hover:text-white text-lg tracking-wide font-bold"
+              class="my-2 text-black xl:group-hover:text-white tracking-wide font-bold"
             >
               Join HashiCorp and Obsidian for Virtual Strategy Day South Africa
             </p>
             <span
-              class="text-primary-blue xl:group-hover:text-white inline-block text-lg capitalize"
+              class="text-primary-blue xl:group-hover:text-white inline-block capitalize"
             >
               register now
             </span>
@@ -1188,8 +1188,8 @@ export default {
   transition-duration: 0.3s, 0.3s, 0.3s, 0.3s, 0.3s;
   transition-timing-function: ease, ease, ease, ease, ease;
   transition-delay: 0s, 0s, 0s, 0s, 0s;
-  margin: -8px;
-  padding: 40px;
+  margin: -6px;
+  padding: 30px;
   /* width: 421px; */
 }
 #trusted_business {
