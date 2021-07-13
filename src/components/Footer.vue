@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-black pt-24 px-6">
+  <div class="bg-black pt-24 px-6 xl:px-16">
     <div class="w-full xl:w-6/12">
       <form action="">
         <div class="mb-3">
@@ -394,7 +394,7 @@
                 >jobs</span
               >
               <span
-                class="py-1 px-2 bg-footer-input text-xs tracking-widest font-semibold rounded-sm text-white uppercase ml-1"
+                class="py-1 px-2 bg-footer-input hidden xl:block text-xs tracking-widest font-semibold rounded-sm text-white uppercase ml-1"
                 >we're hiring</span
               >
             </router-link>
