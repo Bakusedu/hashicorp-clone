@@ -8,21 +8,29 @@
             :items="1"
             :nav="false"
             :dots="true"
-            :loop="true"
+            :infinityLoop="true"
             :margin="0"
             :autoplay="true"
+            :autoPlayTimeOut="6000"
+            :slideTransition="`linear`"
             :pullDrag="false"
             :touchDrag="false"
             :mouseDrag="false"
-            :slideTransition="`linear`"
             :animateOut="'fadeOut'"
             :animateIn="'fadeIn'"
+            @changed="animateContent"
           >
             <div
               class="carousel-1-div py-32 px-16"
               style="background:url('https://www.datocms-assets.com/2885/1611862831-pandora-slide.jpg')"
             >
-              <section>
+              <section
+                :class="
+                  currentSlide == 0
+                    ? 'transition-opacity delay-700 opacity-1'
+                    : 'transition-opacity delay-700 opacity-0'
+                "
+              >
                 <h4
                   class="capitalize p-2 text-sm font-semibold border border-primary inline-block"
                 >
@@ -94,13 +102,19 @@
                   </ul>
                 </div>
               </section>
-              <!-- <div class="gradient"></div> -->
+              <div class="gradient"></div>
             </div>
             <div
               class="carousel-1-div py-32 px-16"
               style="background:url('https://www.datocms-assets.com/2885/1611862868-roblox-slide.jpg')"
             >
-              <section>
+              <section
+                :class="
+                  currentSlide == 1
+                    ? 'transition-opacity delay-700 opacity-1'
+                    : 'transition-opacity  delay-700 opacity-0'
+                "
+              >
                 <h4
                   class="capitalize p-2 text-sm font-semibold border border-primary inline-block"
                 >
@@ -172,13 +186,19 @@
                   </ul>
                 </div>
               </section>
-              <!-- <div class="gradient"></div> -->
+              <div class="gradient"></div>
             </div>
             <div
               class="carousel-1-div py-32 px-16"
               style="background:url('https://www.datocms-assets.com/2885/1611862892-mercedes-slide.jpg')"
             >
-              <section>
+              <section
+                :class="
+                  currentSlide == 2
+                    ? 'transition-opacity delay-700 opacity-1'
+                    : 'transition-opacity delay-700 opacity-0'
+                "
+              >
                 <h4
                   class="capitalize p-2 text-sm font-semibold border border-primary inline-block"
                 >
@@ -186,7 +206,7 @@
                   infrastructure enables innovation
                 </h4>
                 <h2 class="text-5xl capitalize font-bold my-6">
-                  at the speed of sound
+                  On the road again
                 </h2>
                 <div class="mb-4 flex items-center">
                   <svg
@@ -250,28 +270,37 @@
                   </ul>
                 </div>
               </section>
-              <!-- <div class="gradient"></div> -->
+              <div class="gradient"></div>
             </div>
           </Carousel>
         </div>
         <!-- mobile -->
         <div id="mobile-carousel">
           <Carousel
+            v-show="screenWidth <= 768"
             :items="1"
             :nav="false"
             :dots="true"
-            :loop="true"
+            :infinityLoop="true"
             :margin="0"
             :autoplay="true"
             :pullDrag="false"
             :touchDrag="false"
             :mouseDrag="false"
+            :autoPlayTimeOut="6000"
             :slideTransition="`linear`"
             :animateOut="'fadeOut'"
             :animateIn="'fadeIn'"
+            @changed="animateContentMobile"
           >
             <div class="hero-mobile px-4 py-14">
-              <section>
+              <section
+                :class="
+                  currentSlideMobile == 0
+                    ? 'transition-opacity delay-700 opacity-1'
+                    : 'transition-opacity delay-700 opacity-0'
+                "
+              >
                 <h4
                   class="capitalize p-2 text-sm font-semibold border border-primary inline-block"
                 >
@@ -351,7 +380,13 @@
               <!-- <div class="gradient"></div> -->
             </div>
             <div class="hero-mobile px-4 py-14">
-              <section>
+              <section
+                :class="
+                  currentSlideMobile == 1
+                    ? 'transition-opacity delay-700 opacity-1'
+                    : 'transition-opacity delay-700 opacity-0'
+                "
+              >
                 <h4
                   class="capitalize p-2 text-sm font-semibold border border-primary inline-block"
                 >
@@ -431,7 +466,13 @@
               <!-- <div class="gradient"></div> -->
             </div>
             <div class="hero-mobile px-4 py-14">
-              <section>
+              <section
+                :class="
+                  currentSlideMobile == 2
+                    ? 'transition-opacity delay-700 opacity-1'
+                    : 'transition-opacity delay-700 opacity-0'
+                "
+              >
                 <h4
                   class="capitalize p-2 text-sm font-semibold border border-primary inline-block"
                 >
@@ -1167,6 +1208,26 @@ export default {
     Container,
     Carousel,
   },
+  data() {
+    return {
+      currentSlide: 0,
+      currentSlideMobile: 0,
+      autoplay: true,
+    };
+  },
+  methods: {
+    animateContent(event) {
+      this.currentSlide = event.item.index;
+    },
+    animateContentMobile(event) {
+      this.currentSlideMobile = event.item.index;
+    },
+  },
+  computed: {
+    screenWidth() {
+      return this.$data.$screenSize.width;
+    },
+  },
 };
 </script>
 
@@ -1174,8 +1235,9 @@ export default {
 .gradient {
   position: absolute;
   top: 0px;
+  right: 0px;
   height: 100%;
-  width: 100%;
+  width: 30%;
   background-image: linear-gradient(to right, transparent 80%, black);
 }
 #cards {
@@ -1243,10 +1305,6 @@ export default {
   background-position-x: right !important;
   background-repeat: no-repeat !important;
   position: relative;
-}
-.stickycss img {
-  position: absolute;
-  top: 40px;
 }
 .min-height-70 {
   min-height: 70vh;
