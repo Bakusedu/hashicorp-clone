@@ -1,10 +1,10 @@
 <template>
   <intersect @enter="onChange" :threshold="[1]">
     <div class="py-10 xl:py-24">
-      <h4 class="text-white capitalize font-bold text-3xl xl:text-4xl mb-6">
+      <h4 class="text-white capitalize font-bold text-2xl xl:text-4xl mb-6">
         The HashiCorp Stack
       </h4>
-      <p class="text-primary-text text-lg">
+      <p class="text-primary-text text-base leading-7">
         Our tools provide a control plane for each layer of the cloud, enabling
         enterprises to make the shift to a cloud operating model. Each product
         addresses specific technical and organizational challenges of cloud

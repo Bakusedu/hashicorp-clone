@@ -2,13 +2,13 @@
   <div class="nav-height text-primary text-sm">
     <div class="max-width">
       <div class="hidden xl:block">
-        <div class="mx-8 pt-6 pb-8 flex" style="min-height:inherit">
+        <div class="pt-6 flex" style="min-height:inherit">
           <div class="w-4/12">
             <div class="flex justify-between mb-8">
               <div class="w-1/2">
                 <ul>
                   <h4
-                    class="uppercase font-bold text-gray-800 tracking-widest mb-6"
+                    class="uppercase font-bold text-xs text-black tracking-widest mb-6"
                   >
                     infrastructure
                   </h4>
@@ -80,7 +80,7 @@
               <div class="w-1/2">
                 <ul>
                   <h4
-                    class="uppercase font-bold tracking-widest text-gray-800 mb-6"
+                    class="uppercase font-bold text-xs text-black tracking-widest mb-6"
                   >
                     security
                   </h4>
@@ -121,10 +121,6 @@
                     <router-link :to="'/'">
                       Boundary
                     </router-link>
-                    <span
-                      class="py-1 px-2 bg-gray-800 text-xs tracking-widest rounded-sm text-white uppercase ml-1"
-                      >new</span
-                    >
                   </ul>
                 </ul>
               </div>
@@ -133,7 +129,7 @@
               <div class="w-1/2">
                 <ul>
                   <h4
-                    class="uppercase mb-6 font-bold tracking-widest text-gray-800"
+                    class="uppercase font-bold text-xs text-black tracking-widest mb-6"
                   >
                     networking
                   </h4>
@@ -163,7 +159,7 @@
               <div class="w-1/2">
                 <ul>
                   <h4
-                    class="uppercase mb-6 font-bold tracking-widest text-gray-800"
+                    class="uppercase font-bold text-xs text-black tracking-widest mb-6"
                   >
                     applications
                   </h4>
@@ -200,10 +196,6 @@
                     <router-link :to="'/'">
                       Waypoint
                     </router-link>
-                    <span
-                      class="py-1 px-2 bg-gray-800 text-xs tracking-widest rounded-sm text-white uppercase ml-1"
-                      >new</span
-                    >
                   </ul>
                 </ul>
               </div>
@@ -215,14 +207,11 @@
               <div class="flex justify-between h-full">
                 <div class="w-2/3">
                   <h4
-                    class="uppercase mb-6 tracking-widest font-bold text-gray-800"
+                    class="uppercase font-bold text-xs text-black tracking-widest mb-6"
                   >
                     hashicorp cloud platform
                   </h4>
-                  <p
-                    class="my-2 text-gray-500 tracking-wider"
-                    style="font-weight:600"
-                  >
+                  <p class="my-2 text-subtext-nav" style="font-weight:600">
                     A fully managed platform to automate infrastructure<br />
                     on any cloud with Hashicorp products.
                   </p>
@@ -305,24 +294,28 @@
                     </svg>
                   </div>
                 </div>
-                <div class="w-5/12">
-                  <img
-                    src="https://www.datocms-assets.com/2885/1620155314-blog-library-product-consul-azure-logomarks.jpg"
-                    alt=""
-                    class="h-40 w-full"
-                  />
-                  <div
-                    class="px-10 py-6 card-height bg-light-bg flex flex-col justify-between"
-                  >
-                    <h4
-                      class="font-bold text-base mb-12 leading-6 text-gray-800 tracking-wide"
+                <div class="w-5/12 group" style="min-height:343px">
+                  <router-link :to="'/'">
+                    <img
+                      src="https://www.datocms-assets.com/2885/1620155314-blog-library-product-consul-azure-logomarks.jpg"
+                      alt=""
+                      class="h-40 w-full"
+                    />
+                    <div
+                      class="px-8 py-6 card-height bg-light-bg flex flex-col justify-between"
                     >
-                      Deploy Hashicorp Consul Service on Azure
-                    </h4>
-                    <router-link :to="'/'">
-                      Get started
-                    </router-link>
-                  </div>
+                      <h4
+                        class="font-bold text-base mb-12 leading-6 tracking-wide"
+                      >
+                        Deploy Hashicorp Consul Service on Azure
+                      </h4>
+                      <span
+                        class="group-hover:underline text-link-underline font-semibold"
+                      >
+                        Get started
+                      </span>
+                    </div>
+                  </router-link>
                 </div>
               </div>
             </div>

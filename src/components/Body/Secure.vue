@@ -3,8 +3,7 @@
     <div class="py-10 xl:py-24">
       <div class="flex items-center">
         <svg
-          class="h-16"
-          style="position:relative;left:-33px"
+          class="h-12 lg:h-16 svg-position"
           xmlns="http://www.w3.org/2000/svg"
           width="208"
           height="88"
@@ -17,7 +16,7 @@
           />
         </svg>
       </div>
-      <p class="text-primary-text my-6 text-lg">
+      <p class="text-primary-text text-base leading-7 my-6">
         Manage secrets and protect sensitive data.
       </p>
       <ul class="flex text-white items-center font-semibold mb-3 group">
@@ -85,4 +84,14 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+.svg-position {
+  position: relative;
+  left: -33px;
+}
+@media only screen and (max-width: 768px) {
+  .svg-position {
+    left: -40px;
+  }
+}
+</style>

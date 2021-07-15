@@ -1,5 +1,5 @@
 <template>
-  <div class="text-base">
+  <div class="text-sm">
     <div class="bg-black">
       <div class="max-width text-white" style="position:relative">
         <!-- desktop carousel -->
@@ -21,7 +21,7 @@
             @changed="animateContent"
           >
             <div
-              class="carousel-1-div py-32 px-16"
+              class="carousel-1-div py-32 px-8"
               style="background:url('https://www.datocms-assets.com/2885/1611862831-pandora-slide.jpg')"
             >
               <section
@@ -34,11 +34,11 @@
                 <h4
                   class="capitalize p-2 text-sm font-semibold border border-primary inline-block"
                 >
-                  <span class="text-deep-blue tracking-wider">//</span>
+                  <span class="text-deep-blue tracking-wide">//</span>
                   infrastructure enables innovation
                 </h4>
-                <h2 class="text-5xl capitalize font-bold my-6">
-                  at the speed of sound
+                <h2 class="text-4xl font-bold my-6">
+                  At the speed of sound
                 </h2>
                 <div class="mb-4 flex items-center">
                   <svg
@@ -65,7 +65,7 @@
                   </div>
                 </div>
                 <div class="my-8 text-gray-300" style="max-width:490px">
-                  <p class="m-0 leading-8">
+                  <p class="m-0 leading-7">
                     Global leader in streaming music discovery strikes the right
                     chord using HashiCorp to accelerate application delivery
                     from days to minutes.
@@ -105,7 +105,7 @@
               <div class="gradient"></div>
             </div>
             <div
-              class="carousel-1-div py-32 px-16"
+              class="carousel-1-div py-32 px-8"
               style="background:url('https://www.datocms-assets.com/2885/1611862868-roblox-slide.jpg')"
             >
               <section
@@ -118,11 +118,11 @@
                 <h4
                   class="capitalize p-2 text-sm font-semibold border border-primary inline-block"
                 >
-                  <span class="text-deep-blue tracking-wider">//</span>
+                  <span class="text-deep-blue tracking-wide">//</span>
                   infrastructure enables innovation
                 </h4>
-                <h2 class="text-5xl capitalize font-bold my-6">
-                  the 100-million player platform
+                <h2 class="text-4xl font-bold my-6">
+                  The 100-million player platform
                 </h2>
                 <div class="mb-4 flex items-center">
                   <svg
@@ -149,7 +149,7 @@
                   </div>
                 </div>
                 <div class="my-8 text-gray-300" style="max-width:490px">
-                  <p class="m-0 leading-8">
+                  <p class="m-0 leading-7">
                     As Roblox grows and evolves rapidly, HashiCorp Nomad enables
                     them to scale their global gaming platform easily and
                     reliably
@@ -189,7 +189,7 @@
               <div class="gradient"></div>
             </div>
             <div
-              class="carousel-1-div py-32 px-16"
+              class="carousel-1-div py-32 px-8"
               style="background:url('https://www.datocms-assets.com/2885/1611862892-mercedes-slide.jpg')"
             >
               <section
@@ -202,10 +202,10 @@
                 <h4
                   class="capitalize p-2 text-sm font-semibold border border-primary inline-block"
                 >
-                  <span class="text-deep-blue tracking-wider">//</span>
+                  <span class="text-deep-blue tracking-wide">//</span>
                   infrastructure enables innovation
                 </h4>
-                <h2 class="text-5xl capitalize font-bold my-6">
+                <h2 class="text-4xl font-bold my-6">
                   On the road again
                 </h2>
                 <div class="mb-4 flex items-center">
@@ -233,7 +233,7 @@
                   </div>
                 </div>
                 <div class="my-8 text-gray-300" style="max-width:490px">
-                  <p class="m-0 leading-8">
+                  <p class="m-0 leading-7">
                     Cars, Kubernetes, and HashiCorp Consul. How Mercedes-Benz
                     delivers on service networking to accelerate delivery of its
                     next-gen connected vehicles.
@@ -558,11 +558,11 @@
     </div>
     <div class="bg-light-bg">
       <div
-        class="flex justify-center max-width xl:px-16"
+        class="flex justify-center max-width xl:px-8"
         style="margin:0 auto;width:100%"
       >
         <div
-          class="bg-white w-full flex flex-col xl:flex-row xl:shadow-md z-10"
+          class="bg-white w-full flex flex-col xl:flex-row z-10"
           style="margin-top:-50px"
         >
           <router-link
@@ -571,16 +571,16 @@
             class=" xl:hover:bg-primary-blue group"
           >
             <span
-              class="text-gray-400 xl:group-hover:text-blue-300 block uppercase"
+              class="text-gray-400 text-sm xl:group-hover:text-blue-300 block uppercase"
               >july 12 | live workshop</span
             >
             <p
-              class="my-2 text-black xl:group-hover:text-white tracking-wide font-bold"
+              class="my-2 text-black text-lg xl:group-hover:text-white tracking-wide font-bold"
             >
               Join us for a hands-on workshop covering Terraform Cloud on AWS
             </p>
             <span
-              class="text-primary-blue xl:group-hover:text-white inline-block capitalize"
+              class="text-primary-blue font-semibold xl:group-hover:text-white inline-block capitalize"
             >
               register now
             </span>
@@ -591,16 +591,16 @@
             class=" xl:hover:bg-primary-blue group"
           >
             <span
-              class="text-gray-400 xl:group-hover:text-blue-300 block uppercase"
+              class="text-gray-400 text-sm xl:group-hover:text-blue-300 block uppercase"
               >on-demand</span
             >
             <p
-              class="my-2 text-black xl:group-hover:text-white tracking-wide font-bold"
+              class="my-2 text-black text-lg xl:group-hover:text-white tracking-wide font-bold"
             >
               HashiConf Europe is a wrap. Watch this year's sessions on-demand
             </p>
             <span
-              class="text-primary-blue xl:group-hover:text-white inline-block capitalize"
+              class="text-primary-blue font-semibold xl:group-hover:text-white inline-block capitalize"
             >
               Watch now
             </span>
@@ -611,16 +611,16 @@
             class="xl:hover:bg-primary-blue group"
           >
             <span
-              class="text-gray-400 xl:group-hover:text-blue-300 block uppercase"
+              class="text-gray-400 text-sm xl:group-hover:text-blue-300 block uppercase"
               >july 15 | live webinar</span
             >
             <p
-              class="my-2 text-black xl:group-hover:text-white tracking-wide font-bold"
+              class="my-2 text-black text-lg xl:group-hover:text-white tracking-wide font-bold"
             >
               Join HashiCorp and Obsidian for Virtual Strategy Day South Africa
             </p>
             <span
-              class="text-primary-blue xl:group-hover:text-white inline-block capitalize"
+              class="text-primary-blue font-semibold xl:group-hover:text-white inline-block capitalize"
             >
               register now
             </span>
@@ -629,7 +629,7 @@
       </div>
     </div>
     <div class="bg-light-bg">
-      <div class="max-width py-24 px-4 xl:p-24 bg-light-bg">
+      <div class="max-width py-24 bg-light-bg">
         <ul id="trusted_business">
           <li>
             <img
@@ -678,11 +678,11 @@
     </div>
     <div class="text-center px-6 xl:px-0" style="max-width:784px;margin:0 auto">
       <div class="pt-24 pb-12">
-        <h4 class="text-black font-bold text-center text-3xl xl:text-4xl">
-          Unlocking the cloud operating<br />
+        <h4 class="text-black font-bold text-center text-2xl xl:text-4xl">
+          Unlocking the cloud operating<br class="hidden xl:block" />
           model for enterprises
         </h4>
-        <p class="mt-6 mb-4 text-center text-primary text-xl">
+        <p class="mt-6 mb-4 text-center text-subtext text-lg">
           Enabling the world's largest company to deliver applications faster by
           helping transition from manual processes and ITIL practices to
           self-service automation and Devops practices.
@@ -854,11 +854,11 @@
       >
         <div class="pt-24 pb-12">
           <h4
-            class="text-white capitalize text-3xl xl:text-4xl  font-bold text-center"
+            class="text-white capitalize text-2xl xl:text-4xl  font-bold text-center"
           >
             our products
           </h4>
-          <p class="mt-6 mb-4 xl:text-center text-white text-xl">
+          <p class="mt-6 mb-4 xl:text-center text-white text-lg">
             Delivering cloud infrastructure automation for operations, security,
             networking, and application delivery.
           </p>
@@ -873,7 +873,7 @@
         >
           our partners
         </h4>
-        <p class="mt-6 mb-2 xl:text-center text-black text-xl">
+        <p class="mt-6 mb-2 xl:text-center text-subtext text-lg">
           HashiCorp partners with the world’s top technology and solutions
           vendors, making it easier for organizations to provision, secure,
           connect, and run their applications in any environment.
@@ -899,7 +899,10 @@
           <li
             class="m-2 border group hover:shadow-xl transition duration-150 transform hover:-translate-y-1 border-gray-300 cursor-pointer"
           >
-            <router-link :to="'/'" class="p-8 text-center block">
+            <router-link
+              :to="'/'"
+              class="py-8 px-16 xl:px-20 text-center block"
+            >
               <svg
                 width="200"
                 height="80"
@@ -956,7 +959,10 @@
           <li
             class="m-2 border group hover:shadow-xl transition duration-150 transform hover:-translate-y-1 border-gray-300 cursor-pointer"
           >
-            <router-link :to="'/'" class="p-8 text-center block">
+            <router-link
+              :to="'/'"
+              class="py-8 px-16 xl:px-20 text-center block"
+            >
               <svg
                 width="200"
                 height="80"
@@ -1009,7 +1015,10 @@
           <li
             class="m-2 border group hover:shadow-xl transition duration-150 transform hover:-translate-y-1 border-gray-300 cursor-pointer"
           >
-            <router-link :to="'/'" class="p-8 text-center block">
+            <router-link
+              :to="'/'"
+              class="py-8 px-16 xl:px-20 text-center block"
+            >
               <svg
                 width="200"
                 height="80"
@@ -1077,7 +1086,7 @@
               class="flex h-full justify-center items-center"
             >
               <svg
-                width="92"
+                width="100"
                 height="48"
                 viewBox="0 0 92 48"
                 fill="none"
@@ -1100,6 +1109,21 @@
                   </clipPath>
                 </defs>
               </svg>
+            </router-link>
+          </li>
+          <li
+            class="m-2 border group hover:shadow-xl transition duration-150 transform hover:-translate-y-1 border-gray-300 cursor-pointer px-4"
+            style="max-width:140px;height:176px"
+          >
+            <router-link
+              :to="'/'"
+              class="flex h-full justify-center items-center"
+            >
+              <img
+                src="../assets/img/f5.png"
+                class="h-16 w-36 object-contain object-center"
+                alt=""
+              />
             </router-link>
           </li>
           <li
@@ -1241,7 +1265,7 @@ export default {
   background-image: linear-gradient(to right, transparent 80%, black);
 }
 #cards {
-  padding: 24px;
+  padding: 30px;
   margin: 0px;
 }
 #cards:hover {
@@ -1251,13 +1275,13 @@ export default {
   transition-timing-function: ease, ease, ease, ease, ease;
   transition-delay: 0s, 0s, 0s, 0s, 0s;
   margin: -6px;
-  padding: 30px;
+  padding: 36px;
   /* width: 421px; */
 }
 #trusted_business {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
   list-style: none;
   margin: -30px 0;
   padding: 0;
@@ -1293,7 +1317,7 @@ export default {
   display: flex;
   justify-content: center;
   margin: 30px 0;
-  width: 25%;
+  width: auto;
 }
 #featured_partners li {
   max-width: 360px;
@@ -1316,7 +1340,7 @@ export default {
   .owl-dots {
     position: absolute !important;
     bottom: -190px !important;
-    left: 32px !important;
+    left: 18px !important;
     display: flex !important;
     flex-direction: row !important;
   }
@@ -1324,7 +1348,7 @@ export default {
     margin-right: 25px;
   }
   #cards:hover {
-    padding: 24px;
+    padding: 30px;
     margin: 0px;
   }
   #trusted_business li {

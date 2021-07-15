@@ -32,7 +32,7 @@ export default {
 
 <style>
 #app {
-  font-family: "Signika", sans-serif;
+  font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 </style>

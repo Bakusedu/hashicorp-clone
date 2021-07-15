@@ -2,17 +2,14 @@
   <div class="nav-height text-primary text-sm">
     <div class="max-width">
       <div class="hidden xl:block">
-        <div
-          class="mx-8 pt-6 pb-8 flex justify-between"
-          style="min-height:inherit"
-        >
+        <div class="pt-6 flex justify-between" style="min-height:inherit">
           <div class="w-4/12">
             <div class="flex justify-between h-full">
-              <div class="w-1/2">
+              <div class="w-space-between">
                 <div class="flex flex-col justify-between h-full">
                   <ul>
                     <h4
-                      class="uppercase font-bold text-gray-800 tracking-widest mb-6"
+                      class="uppercase font-bold text-xs text-black tracking-widest mb-6"
                     >
                       customer success
                     </h4>
@@ -48,10 +45,10 @@
                   </ul>
                 </div>
               </div>
-              <div class="w-1/2">
+              <div class="w-space-between">
                 <ul>
                   <h4
-                    class="uppercase font-bold tracking-widest text-gray-800 mb-6"
+                    class="uppercase font-bold text-xs text-black tracking-widest mb-6"
                   >
                     support
                   </h4>
@@ -79,9 +76,9 @@
               </div>
             </div>
           </div>
-          <div class="w-23%">
+          <div class="w-23%" style="min-height:343px">
             <div class="flex justify-between h-full">
-              <div class="bg-light-bg px-10">
+              <div class="bg-light-bg px-8">
                 <img
                   src="https://www.datocms-assets.com/2885/1620077090-hashicorp-stack-promo.png"
                   alt=""

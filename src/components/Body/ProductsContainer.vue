@@ -1,45 +1,48 @@
 <template>
   <intersect>
-    <div class="max-width px-8 xl:px-16" style="position:relative">
+    <div
+      class="max-width px-8 xl:px-16 font-semibold"
+      style="position:relative"
+    >
       <div class="flex justify-between">
         <div
           id="fixed"
-          class="w-1/6 h-screen hidden xl:flex items-center stickycss"
+          class="w-1/6 h-screen hidden xl:flex items-center text-base stickycss"
         >
           <ul>
             <li
               class="capitalize mb-2 transition"
-              :class="index == 0 ? 'text-white font-semibold' : 'text-primary'"
+              :class="index == 0 ? 'text-white font-semibold' : 'text-subtext'"
             >
               Overview
             </li>
             <li
               class="capitalize mb-2 transition"
-              :class="index == 1 ? 'text-white font-semibold' : 'text-primary'"
+              :class="index == 1 ? 'text-white font-semibold' : 'text-subtext'"
             >
               Provision
             </li>
             <li
               class="capitalize mb-2 transition"
-              :class="index == 2 ? 'text-white font-bold' : 'text-primary'"
+              :class="index == 2 ? 'text-white font-bold' : 'text-subtext'"
             >
               Secure
             </li>
             <li
               class="capitalize mb-2 transition"
-              :class="index == 3 ? 'text-white font-bold' : 'text-primary'"
+              :class="index == 3 ? 'text-white font-bold' : 'text-subtext'"
             >
               Connect
             </li>
             <li
               class="capitalize transition"
-              :class="index == 4 ? 'text-white font-bold' : 'text-primary'"
+              :class="index == 4 ? 'text-white font-bold' : 'text-subtext'"
             >
               Run
             </li>
           </ul>
         </div>
-        <div class="w-full lg:w-5/12 flex flex-col items-center min-height-70">
+        <div class="w-full lg:w-1/3 flex flex-col items-center min-height-70">
           <div class="py-4 xl:py-24">
             <Hashicorp @scrollHashicorp="handleTarget" />
             <Provision @scrollProvision="handleTarget" />

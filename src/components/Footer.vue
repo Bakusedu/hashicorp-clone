@@ -163,7 +163,7 @@
           </li>
         </ul>
       </div>
-      <div class="xl:flex  justify-between text-sm text-primary">
+      <div class="xl:flex  justify-between mb-4 text-sm text-primary">
         <div class="w-full xl:w-5/12">
           <div class="grid gap-8 grid-cols-2 xl:grid-cols-2">
             <div class="py-4">
@@ -174,8 +174,8 @@
               <ul class="flex items-center text-white font-semibold my-3">
                 <svg
                   class="mr-2"
-                  width="24"
-                  height="24"
+                  width="26"
+                  height="26"
                   viewBox="0 0 144 144"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -199,8 +199,9 @@
               >
               <ul class="flex font-semibold items-center my-3">
                 <svg
-                  width="24"
-                  height="24"
+                  class="mr-2"
+                  width="26"
+                  height="26"
                   viewBox="0 0 144 144"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -224,8 +225,8 @@
               <ul class="flex font-semibold items-center my-3">
                 <svg
                   class="mr-2"
-                  width="24"
-                  height="24"
+                  width="26"
+                  height="26"
                   viewBox="0 0 144 144"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -252,8 +253,8 @@
               <ul class="flex font-semibold items-center my-3">
                 <svg
                   class="mr-2"
-                  width="24"
-                  height="24"
+                  width="26"
+                  height="26"
                   viewBox="0 0 144 144"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -317,19 +318,11 @@
                   class="block my-2 text-gray-300 hover:text-white capitalize"
                   >boundary</span
                 >
-                <span
-                  class="py-1 px-2 bg-footer-input text-xs tracking-widest font-semibold rounded-sm text-white uppercase ml-1"
-                  >new</span
-                >
               </router-link>
               <router-link class="flex items-center" :to="'/'">
                 <span
                   class="block my-2 text-gray-300 hover:text-white capitalize"
                   >waypoint</span
-                >
-                <span
-                  class="py-1 px-2 bg-footer-input text-xs tracking-widest font-semibold rounded-sm text-white uppercase ml-1"
-                  >new</span
                 >
               </router-link>
               <router-link :to="'/'">
@@ -441,6 +434,36 @@
             </div>
           </div>
         </div>
+      </div>
+      <div
+        class="hidden xl:flex justify-between border-t text-xs border-primary py-10 text-white"
+      >
+        <div class="xl:w-20%">
+          <ul class="flex justify-between">
+            <li class="">System Status</li>
+            <li>Cookie Manager</li>
+          </ul>
+        </div>
+        <div class="w-5/12">
+          <ul class="flex justify-between">
+            <li class="">Terms of Use</li>
+            <li class="">Security</li>
+            <li class="">Privacy</li>
+            <li>Trademark Policy</li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="block xl:hidden border-t text-xs border-primary py-10 text-white"
+      >
+        <ul class="flex flex-wrap leading-8">
+          <li class="mr-4">System Status</li>
+          <li class="mr-4">Cookie Manager</li>
+          <li class="mr-4">Terms of Use</li>
+          <li class="mr-4">Security</li>
+          <li class="mr-4">Privacy</li>
+          <li>Trademark Policy</li>
+        </ul>
       </div>
     </div>
   </div>

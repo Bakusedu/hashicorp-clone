@@ -2,15 +2,12 @@
   <div class="nav-height text-primary text-sm">
     <div class="max-width">
       <div class="hidden xl:block">
-        <div
-          class="mx-8 pt-6 pb-8 flex justify-between"
-          style="min-height:inherit"
-        >
+        <div class="pt-6 flex justify-between" style="min-height:inherit">
           <div class="w-1/2 flex justify-between">
             <div class="w-1/3 flex flex-col justify-between">
               <ul>
                 <h4
-                  class="uppercase font-bold text-gray-800 tracking-widest mb-6"
+                  class="uppercase font-bold text-xs text-black tracking-widest mb-6"
                 >
                   resources
                 </h4>
@@ -92,7 +89,7 @@
             <div class="w-1/3 flex flex-col justify-between">
               <ul>
                 <h4
-                  class="uppercase font-bold text-gray-800 tracking-widest mb-6"
+                  class="uppercase font-bold text-xs text-black tracking-widest mb-6"
                 >
                   docs
                 </h4>
@@ -130,19 +127,11 @@
                   <router-link class="capitalize" :to="'/'">
                     Boundary
                   </router-link>
-                  <span
-                    class="py-1 px-2 bg-gray-800 text-xs tracking-widest rounded-sm text-white uppercase ml-1"
-                    >new</span
-                  >
                 </ul>
                 <ul class="flex items-center font-semibold my-2">
                   <router-link class="capitalize" :to="'/'">
                     waypoint
                   </router-link>
-                  <span
-                    class="py-1 px-2 bg-gray-800 text-xs tracking-widest rounded-sm text-white uppercase ml-1"
-                    >new</span
-                  >
                 </ul>
                 <ul class="flex items-center font-semibold my-2">
                   <router-link class="capitalize" :to="'/'">
@@ -152,7 +141,7 @@
               </ul>
             </div>
           </div>
-          <div class="w-23%">
+          <div class="w-23%" style="height:343px">
             <router-link style="text-decoration:none" class="group" :to="'/'">
               <img
                 src="https://www.datocms-assets.com/2885/1594358361-hashilearn-navpromo-1-1.jpg"
@@ -160,11 +149,9 @@
                 class="h-40 w-full object-cover object-center"
               />
               <div
-                class="px-10 py-6 card-height bg-light-bg flex flex-col justify-between"
+                class="px-8 py-6 card-height bg-light-bg flex flex-col justify-between"
               >
-                <h4
-                  class="font-bold text-base leading-6 text-gray-800 tracking-wide"
-                >
+                <h4 class="font-bold text-base leading-6 tracking-wide">
                   Learn how to provision, secure, connect, and run any
                   infrastructure for any application
                 </h4>

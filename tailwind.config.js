@@ -5,7 +5,10 @@ module.exports = {
     extend: {
       colors :{
         'whitish' : '#fff',
-        'primary' : '#474748',
+        'primary' : '#1D1E1F',
+        'subtext-nav' : '#767678',
+        'subtext' : '#343536',
+        'link-underline' : '#373839',
         'light-bg' : '#f2f2f4',
         'deep-blue': '#2d519b',
         'primary-blue' : '#2965ce',
@@ -17,6 +20,7 @@ module.exports = {
         "space-between": "47%",
         "23%": "23%",
         "28%": "28%",
+        "20%": "20%",
       },
       stroke: theme => ({
        'purple': theme('colors.purple'),

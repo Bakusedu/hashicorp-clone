@@ -2,16 +2,13 @@
   <div class="nav-height text-primary text-sm">
     <div class="max-width">
       <div class="hidden xl:block">
-        <div
-          class="mx-8 pt-6 pb-8 flex justify-between"
-          style="min-height:inherit"
-        >
+        <div class="pt-6 flex justify-between" style="min-height:inherit">
           <div class="w-1/6 flex flex-col justify-between">
             <div>
               <div>
                 <ul>
                   <h4
-                    class="uppercase font-bold text-gray-800 tracking-widest mb-6"
+                    class="uppercase font-bold text-xs text-black tracking-widest mb-6"
                   >
                     partners
                   </h4>
@@ -66,7 +63,9 @@
             </div>
           </div>
           <div class="w-1/2">
-            <h4 class="uppercase font-bold text-gray-800 tracking-widest mb-6">
+            <h4
+              class="uppercase font-bold text-xs text-black tracking-widest mb-6"
+            >
               featured cloud partners
             </h4>
             <div class="flex justify-between">
@@ -170,26 +169,24 @@
               </div>
             </div>
           </div>
-          <div class="w-23%">
-            <router-link class="group" style="text-decoration:none" :to="'/'">
-              <div class="bg-light-bg h-full">
-                <img
-                  src="https://www.datocms-assets.com/2885/1625076250-hashicorppartnerlock-upsplunk.png"
-                  alt=""
-                  class="h-40 w-full object-cover object-center"
-                />
-                <div
-                  class="px-10 pb-5 card-height bg-light-bg flex flex-col justify-between"
+          <div class="w-23% group bg-light-bg px-8" style="min-height:343px">
+            <router-link :to="'/'">
+              <img
+                src="https://www.datocms-assets.com/2885/1620077090-hashicorp-stack-promo.png"
+                alt=""
+                class="h-40 object-cover object-center"
+              />
+              <div
+                class="py-5 card-height bg-light-bg flex flex-col justify-between"
+              >
+                <h4 class="font-bold text-base leading-6 tracking-wide">
+                  Fast Track Multi-Cloud Success with HashiCorp &amp; Splunk
+                </h4>
+                <span
+                  class="text-link-underline group-hover:underline font-semibold"
                 >
-                  <h4
-                    class="font-bold text-base leading-6 text-gray-800 tracking-wide"
-                  >
-                    Observability in the Cloud Operating Model with Splunk
-                  </h4>
-                  <p class="font-semibold group-hover:underline">
-                    Learn more
-                  </p>
-                </div>
+                  Read White Paper
+                </span>
               </div>
             </router-link>
           </div>

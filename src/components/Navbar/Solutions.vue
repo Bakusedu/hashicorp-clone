@@ -2,17 +2,14 @@
   <div class="nav-height text-primary text-sm">
     <div class="max-width">
       <div class="hidden xl:block">
-        <div
-          class="mx-8 pt-6 pb-8 flex justify-between"
-          style="min-height:inherit"
-        >
+        <div class="pt-6 pb-8 flex justify-between" style="min-height:inherit">
           <div class="w-4/12">
             <div class="flex justify-between h-full">
-              <div class="w-1/2">
+              <div class="w-space-between">
                 <div class="flex flex-col justify-between h-full">
                   <ul>
                     <h4
-                      class="uppercase font-bold text-gray-800 tracking-widest mb-6"
+                      class="uppercase font-bold text-xs text-black tracking-widest mb-6"
                     >
                       solutions
                     </h4>
@@ -48,10 +45,10 @@
                   </ul>
                 </div>
               </div>
-              <div class="w-1/2">
+              <div class="w-space-between">
                 <ul>
                   <h4
-                    class="uppercase font-bold tracking-widest text-gray-800 mb-6"
+                    class="uppercase font-bold text-xs text-black tracking-widest mb-6"
                   >
                     customer stories
                   </h4>
@@ -91,43 +88,54 @@
           </div>
           <div class="w-1/2">
             <div class="flex justify-between h-full">
-              <div class="w-space-between">
-                <img
-                  src="https://www.datocms-assets.com/2885/1519174499-humility-3x.jpg"
-                  alt=""
-                  class="h-40 object-cover object-center"
-                />
-                <div
-                  class="px-10 py-6 card-height bg-light-bg flex flex-col justify-between"
-                >
-                  <h4
-                    class="font-bold text-base mb-11 leading-6 text-gray-800 tracking-wide"
+              <div class="w-space-between group" style="min-height:343px">
+                <router-link :to="'/'">
+                  <img
+                    src="https://www.datocms-assets.com/2885/1519174499-humility-3x.jpg"
+                    alt=""
+                    class="h-40 object-cover object-center"
+                  />
+                  <div
+                    class="px-8 py-6 card-height bg-light-bg flex flex-col justify-between"
                   >
-                    Discover our latest Webinars and Workshops
-                  </h4>
-                  <router-link :to="'/'" class="font-semibold">
-                    View webinars
-                  </router-link>
-                </div>
+                    <h4
+                      class="font-bold text-base mb-11 leading-6 tracking-wide"
+                    >
+                      Discover our latest Webinars and Workshops
+                    </h4>
+                    <span
+                      class="font-semibold group-hover:underline text-link-underline"
+                    >
+                      View webinars
+                    </span>
+                  </div>
+                </router-link>
               </div>
-              <div class="w-space-between bg-light-bg px-10">
-                <img
-                  src="https://www.datocms-assets.com/2885/1620077090-hashicorp-stack-promo.png"
-                  alt=""
-                  class="h-40 object-cover object-center"
-                />
-                <div
-                  class="py-5 card-height bg-light-bg flex flex-col justify-between"
-                >
-                  <h4
-                    class="font-bold text-base mb-12 leading-6 text-gray-800 tracking-wide"
+              <div
+                class="w-space-between group bg-light-bg px-8"
+                style="min-height:343px"
+              >
+                <router-link :to="'/'">
+                  <img
+                    src="https://www.datocms-assets.com/2885/1620077090-hashicorp-stack-promo.png"
+                    alt=""
+                    class="h-40 object-cover object-center"
+                  />
+                  <div
+                    class="py-5 card-height bg-light-bg flex flex-col justify-between"
                   >
-                    Unlocking the Cloud Operating Model
-                  </h4>
-                  <router-link :to="'/'" class="font-semibold">
-                    Read whitepaper
-                  </router-link>
-                </div>
+                    <h4
+                      class="font-bold text-base mb-12 leading-6 tracking-wide"
+                    >
+                      Unlocking the Cloud Operating Model
+                    </h4>
+                    <span
+                      class="text-link-underline group-hover:underline font-semibold"
+                    >
+                      Read whitepaper
+                    </span>
+                  </div>
+                </router-link>
               </div>
             </div>
           </div>
@@ -138,7 +146,7 @@
           <div class="w-full mb-8">
             <ul>
               <h4
-                class="uppercase font-bold text-gray-800 tracking-widest mb-6"
+                class="uppercase font-bold text-xs text-black tracking-widest mb-6"
               >
                 solutions
               </h4>
@@ -157,7 +165,7 @@
           <div class="w-full">
             <ul>
               <h4
-                class="uppercase font-bold tracking-widest text-gray-800 mb-6"
+                class="uppercase font-bold text-xs text-black tracking-widest mb-6"
               >
                 customer stories
               </h4>

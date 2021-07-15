@@ -2,16 +2,13 @@
   <div class="nav-height text-primary text-sm">
     <div class="max-width">
       <div class="hidden xl:block">
-        <div
-          class="mx-8 pt-6 pb-8 flex justify-between"
-          style="min-height:inherit"
-        >
+        <div class="pt-6 flex justify-between" style="min-height:inherit">
           <div class="w-4/12">
             <div class="flex justify-between mb-8 h-full">
               <div class="w-1/2 flex flex-col justify-between">
                 <ul>
                   <h4
-                    class="uppercase font-bold text-gray-800 tracking-widest mb-6"
+                    class="uppercase font-bold text-xs text-black tracking-widest mb-6"
                   >
                     company
                   </h4>
@@ -74,13 +71,13 @@
               <div class="w-1/2">
                 <ul>
                   <h4
-                    class="uppercase font-bold tracking-widest text-gray-800 mb-6"
+                    class="uppercase font-bold text-xs text-black tracking-widest mb-6"
                   >
                     events
                   </h4>
-                  <ul class="flex font-semibold uppercase items-center my-2">
+                  <ul class="flex font-semibold items-center my-2">
                     <router-link :to="'/'">
-                      hashi conf
+                      HashiConf
                     </router-link>
                   </ul>
                   <ul class="flex font-semibold items-center my-2">
@@ -104,44 +101,50 @@
           </div>
           <div class="w-1/2">
             <div class="flex justify-between h-full">
-              <div class="w-space-between">
-                <img
-                  src="https://www.datocms-assets.com/2885/1574101490-hashicorp-hiring-2x.png"
-                  alt=""
-                  class="h-40 w-full object-cover object-center"
-                />
-                <div
-                  class="px-10 py-5 card-height bg-light-bg flex flex-col justify-between"
-                >
-                  <h4
-                    class="font-bold text-base leading-6 text-gray-800 tracking-wide"
+              <div class="w-space-between group">
+                <router-link :to="'/'">
+                  <img
+                    src="https://www.datocms-assets.com/2885/1574101490-hashicorp-hiring-2x.png"
+                    alt=""
+                    class="h-40 w-full object-cover object-center"
+                  />
+                  <div
+                    class="px-8 py-5 card-height bg-light-bg flex flex-col justify-between"
                   >
-                    Join us to build industry-leading open source tools and
-                    enterprise products
-                  </h4>
-                  <router-link :to="'/'" class="font-semibold block">
-                    View all open positions
-                  </router-link>
-                </div>
+                    <h4 class="font-bold text-base leading-6 tracking-wide">
+                      Join us to build industry-leading open source tools and
+                      enterprise products
+                    </h4>
+                    <span
+                      class="group-hover:underline text-link-underline font-semibold"
+                    >
+                      View all open positions
+                    </span>
+                  </div>
+                </router-link>
               </div>
-              <div class="w-space-between">
-                <img
-                  src="https://www.datocms-assets.com/2885/1574812910-swag-promo.jpg"
-                  alt=""
-                  class="h-40 w-full object-cover object-center"
-                />
-                <div
-                  class="px-10 py-5 card-height bg-light-bg flex flex-col justify-between"
-                >
-                  <h4
-                    class="font-bold text-base mb-12 leading-6 text-gray-800 tracking-wide"
+              <div class="w-space-between group" style="min-height:343px">
+                <router-link :to="'/'">
+                  <img
+                    src="https://www.datocms-assets.com/2885/1574812910-swag-promo.jpg"
+                    alt=""
+                    class="h-40 w-full object-cover object-center"
+                  />
+                  <div
+                    class="px-8 py-5 card-height bg-light-bg flex flex-col justify-between"
                   >
-                    Anouncing the HashiCorp store
-                  </h4>
-                  <router-link :to="'/'" class="font-semibold block">
-                    Visit the store
-                  </router-link>
-                </div>
+                    <h4
+                      class="font-bold text-base mb-12 leading-6 tracking-wide"
+                    >
+                      Anouncing the HashiCorp store
+                    </h4>
+                    <span
+                      class="group-hover:underline text-link-underline font-semibold"
+                    >
+                      Visit the store
+                    </span>
+                  </div>
+                </router-link>
               </div>
             </div>
           </div>
