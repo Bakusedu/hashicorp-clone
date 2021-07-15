@@ -562,8 +562,7 @@
         style="margin:0 auto;width:100%"
       >
         <div
-          class="bg-white w-full flex flex-col xl:flex-row z-10"
-          style="margin-top:-50px"
+          class="bg-white w-full flex flex-col xl:flex-row z-10 responsive-margin"
         >
           <router-link
             :to="'/'"
@@ -1264,6 +1263,9 @@ export default {
   width: 30%;
   background-image: linear-gradient(to right, transparent 80%, black);
 }
+.responsive-margin {
+  margin-top: -50px;
+}
 #cards {
   padding: 30px;
   margin: 0px;
@@ -1336,13 +1338,16 @@ export default {
 #mobile-carousel {
   display: none;
 }
-@media only screen and (max-width: 768px) {
+@media screen and (min-width: 100px) and (max-width: 320px) {
   .owl-dots {
     position: absolute !important;
-    bottom: -190px !important;
-    left: 18px !important;
+    bottom: -112px !important;
+    left: 17px !important;
     display: flex !important;
     flex-direction: row !important;
+  }
+  .responsive-margin {
+    margin-top: 0px;
   }
   .owl-dots .owl-dot {
     margin-right: 25px;
@@ -1378,7 +1383,52 @@ export default {
     background-image: linear-gradient(45deg, black 60%, transparent 100%);
   }
 }
-@media screen and (max-width: 1119px) and (min-width: 768px) {
+@media screen and (min-width: 321px) and (max-width: 768px) {
+  .owl-dots {
+    position: absolute !important;
+    bottom: -190px !important;
+    left: 18px !important;
+    display: flex !important;
+    flex-direction: row !important;
+  }
+  .responsive-margin {
+    margin-top: 0px;
+  }
+  .owl-dots .owl-dot {
+    margin-right: 25px;
+  }
+  #cards:hover {
+    padding: 30px;
+    margin: 0px;
+  }
+  #trusted_business li {
+    width: 50%;
+  }
+  #desktop-carousel {
+    display: none;
+  }
+  #mobile-carousel {
+    display: block;
+    height: 94vh;
+  }
+  .hero-mobile {
+    min-height: 482px;
+    position: relative;
+  }
+  .hero-mobile .carousel-img {
+    max-height: 188px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: -1;
+    object-fit: contain;
+    object-position: right;
+  }
+  .gradient {
+    background-image: linear-gradient(45deg, black 60%, transparent 100%);
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1119px) {
   .carousel-1-div {
     min-height: 482px;
   }
