@@ -653,7 +653,7 @@
 export default {};
 </script>
 
-<style>
+<style scoped>
 #column-divider {
   border-left: 1px solid lightgray;
   height: 280px;

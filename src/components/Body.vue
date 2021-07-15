@@ -413,11 +413,11 @@
                     ></path>
                   </svg>
                   <div class="border-l border-primary">
-                    <img
+                    <!-- <img
                       src="https://www.datocms-assets.com/2885/1612205007-roblox-homepage-logo.svg"
                       class="ml-3"
                       alt=""
-                    />
+                    /> -->
                   </div>
                 </div>
                 <div class="my-4 text-gray-300 text-sm" style="max-width:490px">
@@ -1364,7 +1364,7 @@ export default {
   }
   #mobile-carousel {
     display: block;
-    height: 94vh;
+    height: 100vh;
   }
   .hero-mobile {
     min-height: 482px;
@@ -1409,7 +1409,7 @@ export default {
   }
   #mobile-carousel {
     display: block;
-    height: 94vh;
+    height: 84vh;
   }
   .hero-mobile {
     min-height: 482px;
