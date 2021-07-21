@@ -36,7 +36,7 @@ module.exports = {
       transform : ['hover','group-hover'],
       margin : ['group-hover','hover'],
       stroke: ['group-hover'],
-      fill: ['hover','group-hover'],
+      fill: ['hover','group-hover']
     },
   },
   plugins: [],

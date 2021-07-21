@@ -1077,15 +1077,15 @@
           class="flex flex-wrap justify-center items-center my-6"
         >
           <li
-            class="m-2 border group hover:shadow-xl transition duration-150 transform hover:-translate-y-1 border-gray-300 cursor-pointer px-4"
-            style="max-width:140px;height:176px"
+            class="m-4 border group hover:shadow-xl transition duration-150 transform hover:-translate-y-1 border-gray-300 cursor-pointer"
+            style="flex:0 1 176px; height:176px"
           >
             <router-link
               :to="'/'"
               class="flex h-full justify-center items-center"
             >
               <svg
-                width="100"
+                width="92"
                 height="48"
                 viewBox="0 0 92 48"
                 fill="none"
@@ -1111,8 +1111,8 @@
             </router-link>
           </li>
           <li
-            class="m-2 border group hover:shadow-xl transition duration-150 transform hover:-translate-y-1 border-gray-300 cursor-pointer px-4"
-            style="max-width:140px;height:176px"
+            class="m-4 border group hover:shadow-xl transition duration-150 transform hover:-translate-y-1 border-gray-300 cursor-pointer px-4"
+            style="height:176px;flex:0 1 176px"
           >
             <router-link
               :to="'/'"
@@ -1120,14 +1120,14 @@
             >
               <img
                 src="../assets/img/f5.png"
-                class="h-16 w-36 object-contain object-center"
+                class="h-12 w-36 object-contain object-center"
                 alt=""
               />
             </router-link>
           </li>
           <li
-            class="m-2 border group hover:shadow-xl transition duration-150 transform hover:-translate-y-1 border-gray-300 cursor-pointer px-4"
-            style="max-width:140px;height:176px"
+            class="m-4 border group hover:shadow-xl transition duration-150 transform hover:-translate-y-1 border-gray-300 cursor-pointer px-4"
+            style="height:176px;flex:0 1 176px"
           >
             <router-link
               :to="'/'"
@@ -1164,8 +1164,8 @@
             </router-link>
           </li>
           <li
-            class="m-2 border group hover:shadow-xl transition duration-150 transform hover:-translate-y-1 border-gray-300 cursor-pointer px-4"
-            style="max-width:140px;height:176px"
+            class="m-4 border group hover:shadow-xl transition duration-150 transform hover:-translate-y-1 border-gray-300 cursor-pointer px-4"
+            style="height:176px;flex:0 1 176px"
           >
             <router-link
               :to="'/'"
@@ -1409,7 +1409,7 @@ export default {
   }
   #mobile-carousel {
     display: block;
-    height: 84vh;
+    height: 600px;
   }
   .hero-mobile {
     min-height: 482px;
